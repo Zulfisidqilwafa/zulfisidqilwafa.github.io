@@ -40,7 +40,7 @@ window.onscroll = () => {
 
 /*==================== scroll reveal ====================*/
 ScrollReveal({
-    reset: true,
+    // reset: true,
     distance: '80px',
     duration: 2000,
     delay: 200
@@ -67,6 +67,7 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
 
 /*==================== contact script ====================*/
 const form = document.querySelector("form");
