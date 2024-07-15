@@ -139,10 +139,10 @@ function checkEmail() {
         email.parentElement.classList.add("error");
 
         if (email.value != "") {
-            errorTxtEmail.innerText = "Enter a valid email address";
+            errorTxtEmail.innerText = "Masukan alamat email yang valid";
         }
         else {
-            errorTxtEmail.innerText = "Email can't be blank";
+            errorTxtEmail.innerText = "Email tidak boleh kosong";
         }
     }
 
