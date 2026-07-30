@@ -1,231 +1,698 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="x-icon" href="images/zulfi-2.png">
-  <title>Document</title>
+  <meta name="description"
+    content="Portfolio Zulfi Sidqil Wafa, profesional IT dan PPIC di manufaktur plastik dengan kemampuan full-stack, PHP, SQL, Excel, sistem, jaringan, dan data operasional.">
+  <meta name="theme-color" content="#0b1110">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:title" content="Zulfi Sidqil Wafa — IT, PPIC & Full-stack">
+  <meta property="og:description" content="Menghubungkan software, data, dan operasional manufaktur.">
+  <meta property="og:url" content="https://zulfisidqilwafa.github.io/">
+  <meta property="og:image" content="https://zulfisidqilwafa.github.io/images/og-portfolio-v3.png">
+  <meta property="og:image:alt" content="Zulfi Sidqil Wafa — IT, PPIC, dan Full-stack">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://zulfisidqilwafa.github.io/images/og-portfolio-v3.png">
+  <link rel="canonical" href="https://zulfisidqilwafa.github.io/">
+  <link rel="alternate" hreflang="id" href="https://zulfisidqilwafa.github.io/?lang=id">
+  <link rel="alternate" hreflang="en" href="https://zulfisidqilwafa.github.io/?lang=en">
+  <link rel="icon" type="image/png" href="images/zulfi-2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <title>Zulfi Sidqil Wafa — IT, PPIC & Full-stack</title>
   <link rel="stylesheet" href="style.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Zulfi Sidqil Wafa",
+      "url": "https://zulfisidqilwafa.github.io/",
+      "image": "https://zulfisidqilwafa.github.io/images/zulfi-2.png",
+      "jobTitle": "IT and PPIC Professional, Full-stack Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "PT Polyta Global Mandiri",
+        "url": "https://www.polyta.id"
+      },
+      "knowsAbout": ["PPIC", "Production Planning", "Inventory Control", "PHP", "SQL", "Laragon", "Microsoft Excel", "Golang", "React", "Web Development", "Computer Networks", "IT Support", "System Administration", "Operational Data"],
+      "sameAs": [
+        "https://github.com/Zulfisidqilwafa",
+        "https://www.instagram.com/zulfi_sidqil_wafa",
+        "https://www.youtube.com/channel/UCRnHvNKlamJaEKf3JYuEDiQ",
+        "https://www.tiktok.com/@zulfisidqilwafa"
+      ]
+    }
+  </script>
 </head>
 
 <body>
-  <!-- header design -->
-  <header class="header">
-    <a href="#" class="logo">Profil Saya.</a>
+  <a class="skip-link" href="#main-content" data-i18n="skip">Lewati ke konten</a>
 
-    <i class='bx bx-menu' id="menu-icon"></i>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Zulfi Sidqil Wafa, kembali ke beranda">
+        <span class="brand-mark" aria-hidden="true">Z</span>
+        <span class="brand-name">Zulfi Sidqil Wafa</span>
+      </a>
 
-    <nav class="navbar">
-      <a href="#home" class="active">rumah</a>
-      <a href="#about">tentang</a>
-      <a href="#services">jasa</a>
-      <a href="#portfolio">portfolio</a>
-      <a href="#contact">kontak</a>
-    </nav>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Buka menu navigasi"
+        aria-controls="primary-nav" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Navigasi utama">
+        <a href="#profil" data-i18n="navProfile">Profil</a>
+        <a href="#keahlian" data-i18n="navExpertise">Keahlian</a>
+        <a href="#karya" data-i18n="navWork">Karya</a>
+        <a href="#perjalanan" data-i18n="navJourney">Perjalanan</a>
+        <a href="#kontak" data-i18n="navContact">Kontak</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to English">
+          <span class="active">ID</span><i>/</i><span>EN</span>
+        </button>
+        <a class="header-cta" href="cv/zulfisidqilwafa.pdf" target="_blank" rel="noopener">
+          <span data-i18n="viewCv">Lihat CV</span> <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
   </header>
 
-  <!-- home section design -->
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow-row">
+            <span class="availability"><span class="status-dot" aria-hidden="true"></span> <span
+                data-i18n="available">Siap berkolaborasi</span></span>
+            <span class="location" data-i18n="location">Indonesia • UTC+7</span>
+          </div>
 
-  <section class="home" id="home">
-    <div class="home-content">
-      <h3>halo, nama saya</h3>
-      <h1>zulfi sidqil wafa</h1>
-      <h3>dan saya <span class="multiple-text"></span></h3>
-      <p>Saya adalah orang yang percaya pada kerja keras,
-        Namun kerja keras sesungguhnya adalah kerja keras yang dimulai
-        dengan cara yang cerdas</p>
-      <div class="social-media">
-        <a href="https://m.facebook.com/zulfi.s.wafa/?locale=ms_MY"><i class='bx bxl-facebook'></i></a>
-        <a href="https://www.tiktok.com/@zulfisidqilwafa?_t=8iSLQNCcKbI&_r=1"><i class='bx bxl-tiktok'></i></a>
-        <a href="https://www.instagram.com/zulfi_sidqil_wafa?igsh=ODA1NTc5OTg5Nw=="><i
-            class='bx bxl-instagram-alt'></i></a>
-        <a href="https://www.youtube.com/channel/UCRnHvNKlamJaEKf3JYuEDiQ"><i class='bx bxl-youtube'></i></a>
-      </div>
-      <a href="cv/zulfisidqilwafa.pdf" class="btn">Unduh CV</a>
-    </div>
-    <div class="home-img">
-      <img src="images/zulfi-1.png" alt="">
-    </div>
-  </section>
+          <p class="hero-kicker">Software & Data <span>/</span> IT Systems <span>/</span> PPIC</p>
+          <h1 id="hero-title" data-i18n-html="heroTitle">Menghubungkan software, data,<br><em>dan operasional
+              manufaktur.</em></h1>
+          <p class="hero-lead" data-i18n="heroLead">Saya Zulfi—profesional IT dan PPIC di manufaktur plastik yang
+            membangun aplikasi, mengelola data operasional, serta menjaga perangkat dan jaringan tetap andal.</p>
 
-  <!-- about section design -->
+          <div class="hero-actions">
+            <a class="button button-primary" href="#karya"><span data-i18n="exploreWork">Jelajahi karya</span> <span
+                aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#kontak"><span data-i18n="discuss">Mari berdiskusi</span> <span
+                aria-hidden="true">↗</span></a>
+          </div>
 
-  <section class="about" id="about">
-    <div class="about-img">
-      <img src="images/zulfi-2.png" alt="">
-    </div>
+          <div class="hero-proof" aria-label="Ringkasan pengalaman">
+            <div>
+              <strong>11+</strong>
+              <span data-i18n-html="proofYears">tahun bertumbuh<br>bersama teknologi</span>
+            </div>
+            <div>
+              <strong>03</strong>
+              <span data-i18n-html="proofPublic">proyek publik<br>dapat dibuka</span>
+            </div>
+            <div>
+              <strong>360°</strong>
+              <span data-i18n-html="proofEnd">kode, data<br>dan operasional</span>
+            </div>
+          </div>
+        </div>
 
-    <div class="about-content">
-      <h2 class="heading">STAFF <span>IT</span></h2>
-      <h3>PT. POLYTA GLOBAL MANDIRI</h3>
-      <p>Seorang teknisi di perusahaan yang bertanggung jawab untuk
-        instalasi, evaluasi dan perbaikan pada tiga objek utama, yaitu:
-        pengembangan komputer, perangkat lunak, dan sistem jaringan.
-      </p>
-      <a href="https://www.polyta.id" class="btn">Tinjau</a>
-    </div>
-  </section>
-
-  <!-- services section design -->
-  <section class="services" id="services">
-    <h2 class="heading">Pelayanan <span>Kami</span></h2>
-
-    <div class="services-container">
-
-      <div class="services-box">
-        <i class='bx bx-code-alt'></i>
-        <h3>Programming</h3>
-        <p>Merancang dan membangun sistem aplikasi menggunakan kode atau bahasa program.</p>
-        <a href="#" class="btn">Selengkapnya</a>
-      </div>
-
-      <div class="services-box">
-        <i class='bx bxs-invader'></i>
-        <h3>Penetration Testing</h3>
-        <p>Proses menguji keamanan suatu sistem dengan cara melakukan simulasi nyata.</p>
-        <a href="#" class="btn">Selengkapnya</a>
-      </div>
-
-      <div class="services-box">
-        <i class='bx bx-cog'></i>
-        <h3>Security</h3>
-        <p>Melindungi sistem teknologi dan perangkat seperti komputer, server, sistem elektronik dan data.
-        </p>
-        <a href="#" class="btn">Selengkapnya</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- portfolio section design -->
-
-  <section class="portfolio" id="portfolio">
-    <h2 class="heading">Proyek <span>Terbaru</span></h2>
-
-    <div class="portfolio-container">
-      <div class="portfolio-box">
-        <img src="images/portfolio1.jpg" alt="">
-        <div class="portfolio-layer">
-          <h4>E-commerce</h4>
-          <p>Membuat aplikasi berbasis website dengan nama INDIT untuk e-commerce</p>
-          <a href=""><i class='bx bx-link-external'></i></a>
+        <div class="hero-visual reveal" aria-label="Ilustrasi Zulfi Sidqil Wafa">
+          <div class="portrait-frame">
+            <span class="portrait-label label-top">IT + PPIC builder</span>
+            <img src="images/zulfi-1.png" alt="Ilustrasi potret Zulfi Sidqil Wafa" width="500" height="500">
+            <span class="portrait-label label-bottom">PHP • SQL • EXCEL • SYSTEMS</span>
+          </div>
+          <div class="orbit orbit-one" aria-hidden="true"></div>
+          <div class="orbit orbit-two" aria-hidden="true"></div>
         </div>
       </div>
 
-      <div class="portfolio-box">
-        <img src="images/portfolio2.jpg" alt="">
-        <div class="portfolio-layer">
-          <h4>Web Admin</h4>
-          <p>Membuat aplikasi berbasis website dengan nama INDIT untuk pengguna admin</p>
-          <a href=""><i class='bx bx-link-external'></i></a>
+      <div class="hero-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>PHP</span><i>✦</i><span>SQL</span><i>✦</i><span>EXCEL</span><i>✦</i><span>PPIC</span><i>✦</i>
+          <span>GOLANG</span><i>✦</i><span>REACT</span><i>✦</i><span>NETWORK</span><i>✦</i><span>DATA</span><i>✦</i>
+          <span>PHP</span><i>✦</i><span>SQL</span><i>✦</i><span>EXCEL</span><i>✦</i><span>PPIC</span><i>✦</i>
+          <span>GOLANG</span><i>✦</i><span>REACT</span><i>✦</i><span>NETWORK</span><i>✦</i><span>DATA</span><i>✦</i>
         </div>
       </div>
+    </section>
 
-      <div class="portfolio-box">
-        <img src="images/portfolio3.jpg" alt="">
-        <div class="portfolio-layer">
-          <h4>Networking</h4>
-          <p>Menjalankan, memantau, dan memperbarui jaringan agar stabil dan tetap terkoneksi</p>
-          <a href=""><i class='bx bx-link-external'></i></a>
+    <section class="section profile-section" id="profil" aria-labelledby="profile-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-index" data-i18n="profileIndex">01 / Profil</p>
+            <h2 id="profile-title" data-i18n-html="profileTitle">Teknologi yang bekerja<br><em>untuk manusia.</em></h2>
+          </div>
+          <p class="section-intro" data-i18n="profileIntro">Rasa penasaran pada cara kerja video game membawa saya
+            mendalami IT sejak usia 10 tahun. Kini saya menghubungkan teknologi, perencanaan produksi, pengendalian
+            persediaan, dan data untuk mendukung operasional manufaktur.</p>
+        </div>
+
+        <div class="profile-grid upgraded-profile">
+          <article class="experience-card reveal">
+            <p class="card-label" data-i18n="currentRole">Peran profesional</p>
+            <div class="experience-top">
+              <div>
+                <h3>Staff IT & PPIC</h3>
+                <p>PT Polyta Global Mandiri</p>
+              </div>
+              <span>Manufacturing Operations</span>
+            </div>
+            <p class="experience-description" data-i18n="polytaDescription">Menangani sistem dan dukungan IT sekaligus
+              membantu perencanaan produksi, pengendalian persediaan, serta pelacakan data operasional perusahaan.</p>
+            <a href="https://www.polyta.id" target="_blank" rel="noopener" class="inline-link">
+              <span data-i18n="visitCompany">Kunjungi perusahaan</span> <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="experience-card venture-card reveal">
+            <p class="card-label" data-i18n="ventureRole">Produk yang sedang dibangun</p>
+            <div class="experience-top">
+              <div>
+                <h3>Nibblium</h3>
+                <p>Technology & Systems</p>
+              </div>
+              <span>Product</span>
+            </div>
+            <p class="experience-description" data-i18n="nibbliumDescription">Mendukung transformasi bisnis camilan
+              melalui produk digital dan sistem operasional yang lebih adaptif, fleksibel, serta terhubung.</p>
+            <a href="https://nibblium.com" target="_blank" rel="noopener" class="inline-link">
+              <span data-i18n="openProduct">Buka produk</span> <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
+
+        <div class="education-row">
+          <article class="education-card reveal">
+            <span class="education-number">01</span>
+            <div>
+              <p class="card-label" data-i18n="education">Pendidikan</p>
+              <h3 data-i18n="informationSystems">Sistem Informasi (S1)</h3>
+              <p data-i18n="faculty">Fakultas Sains dan Teknologi, Jakarta</p>
+              <small data-i18n="isDetails">Analisis kebutuhan, perancangan sistem, manajemen proyek, dan komunikasi
+                bisnis.</small>
+            </div>
+          </article>
+          <article class="education-card reveal">
+            <span class="education-number">02</span>
+            <div>
+              <p class="card-label" data-i18n="technicalFoundation">Fondasi teknis</p>
+              <h3 data-i18n="computerNetwork">Teknik Komputer & Jaringan</h3>
+              <p>SMKN Parungponteng, Tasikmalaya</p>
+              <small data-i18n="networkDetails">Komponen komputer, infrastruktur, pengkabelan, konfigurasi jaringan,
+                dan server.</small>
+            </div>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="portfolio-box">
-        <img src="images/portfolio4.jpg" alt="">
-        <div class="portfolio-layer">
-          <h4>Data Backup</h4>
-          <p>mencegah kehilangan data akibat kegagalan hardware, virus, atau
-            kesalahan pengguna</p>
-          <a href=""><i class='bx bx-link-external'></i></a>
+    <section class="section expertise-section" id="keahlian" aria-labelledby="expertise-title">
+      <div class="container">
+        <div class="section-heading light reveal">
+          <div>
+            <p class="section-index" data-i18n="expertiseIndex">02 / Keahlian</p>
+            <h2 id="expertise-title" data-i18n-html="expertiseTitle">Dari ide hingga operasional,<br><em>saya
+                menghubungkan titiknya.</em></h2>
+          </div>
+          <p class="section-intro" data-i18n="expertiseIntro">Pendekatan lintas fungsi untuk memahami kebutuhan
+            manufaktur, membangun solusi, menata data, lalu menjaga produk dan sistem tetap stabil saat digunakan.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card featured reveal">
+            <div class="service-head">
+              <span class="service-number">01</span>
+              <span class="service-symbol" aria-hidden="true">{ }</span>
+            </div>
+            <h3>Full-stack Development</h3>
+            <p data-i18n="fullstackDesc">Membangun aplikasi web dengan PHP, SQL, Golang, dan React, dari basis data dan
+              logika bisnis hingga antarmuka yang responsif.</p>
+            <ul>
+              <li>PHP / Golang / Backend</li>
+              <li>SQL / Database</li>
+              <li>React / JavaScript</li>
+              <li data-i18n="systemDesign">Perancangan sistem</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-head">
+              <span class="service-number">02</span>
+              <span class="service-symbol" aria-hidden="true">⌁</span>
+            </div>
+            <h3>System & Network</h3>
+            <p data-i18n="networkDesc">Menjaga perangkat, server, dan koneksi bekerja stabil melalui konfigurasi,
+              monitoring, serta pemeliharaan rutin.</p>
+            <ul>
+              <li data-i18n="installation">Instalasi & konfigurasi</li>
+              <li data-i18n="monitoring">Monitoring jaringan</li>
+              <li data-i18n="maintenance">Perawatan perangkat</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-head">
+              <span class="service-number">03</span>
+              <span class="service-symbol" aria-hidden="true">◇</span>
+            </div>
+            <h3>Security & Recovery</h3>
+            <p data-i18n="securityDesc">Mengurangi risiko, menjaga pencadangan lokal dan cloud, serta memulihkan data
+              dan layanan saat gangguan terjadi.</p>
+            <ul>
+              <li>Security assessment</li>
+              <li>Cloud backup & recovery</li>
+              <li>Troubleshooting</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-head">
+              <span class="service-number">04</span>
+              <span class="service-symbol" aria-hidden="true">#</span>
+            </div>
+            <h3 data-i18n="ppicTitle">PPIC & Manufacturing Data</h3>
+            <p data-i18n="ppicDesc">Menghubungkan perencanaan produksi, pengendalian persediaan, dan data operasional
+              agar informasi kerja lebih terstruktur dan mudah ditindaklanjuti.</p>
+            <ul>
+              <li data-i18n="productionPlanning">Perencanaan produksi</li>
+              <li data-i18n="inventoryControl">Pengendalian persediaan</li>
+              <li>Microsoft Excel</li>
+              <li data-i18n="dataQuality">Kualitas & struktur data</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="skill-strip reveal" aria-label="Daftar kemampuan">
+          <span>PHP</span>
+          <span>SQL</span>
+          <span>Laragon</span>
+          <span>Golang</span>
+          <span>React</span>
+          <span>JavaScript</span>
+          <span>Microsoft Excel</span>
+          <span>PPIC</span>
+          <span>System Analysis</span>
+          <span>Computer Network</span>
+          <span>Hardware</span>
         </div>
       </div>
+    </section>
 
-      <div class="portfolio-box">
-        <img src="images/portfolio5.jpg" alt="">
-        <div class="portfolio-layer">
-          <h4>Maintenance</h4>
-          <p>melakukan pemeliharaan perangkat lunak dan keras dari sisi pengguna</p>
-          <a href=""><i class='bx bx-link-external'></i></a>
+    <section class="section projects-section" id="karya" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-index" data-i18n="workIndex">03 / Karya</p>
+            <h2 id="projects-title" data-i18n-html="workTitle">Bukan sekadar tampilan.<br><em>Ada masalah yang
+                diselesaikan.</em></h2>
+          </div>
+          <p class="section-intro" data-i18n="workIntro">Pilihan produk publik, aplikasi internal, dan pekerjaan
+            operasional. Setiap kartu dapat dibuka untuk melihat konteks, kontribusi, serta hasil kerjanya.</p>
+        </div>
+
+        <div class="project-toolbar reveal" role="group" aria-label="Filter kategori proyek">
+          <button class="filter-button active" type="button" data-filter="all" aria-pressed="true"
+            data-i18n="filterAll">Semua</button>
+          <button class="filter-button" type="button" data-filter="product" aria-pressed="false">Product</button>
+          <button class="filter-button" type="button" data-filter="operations" aria-pressed="false"
+            data-i18n="filterOperations">Data & PPIC</button>
+          <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web</button>
+          <button class="filter-button" type="button" data-filter="infrastructure" aria-pressed="false"
+            data-i18n="filterInfrastructure">Infrastruktur</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card project-wide reveal" data-category="product">
+            <div class="project-brand nibblium-cover">
+              <span>NIBBLIUM</span>
+              <small>Nibble the Extraordinary</small>
+              <i aria-hidden="true">N</i>
+            </div>
+            <div class="project-meta">
+              <div>
+                <p>Product • Technology & Systems</p>
+                <h3>Nibblium Digital Experience</h3>
+              </div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="project-description" data-i18n="nibbliumProjectDesc">Produk digital untuk mendukung bisnis
+              camilan, katalog produk, cerita brand, dan sistem operasional yang lebih adaptif.</p>
+            <div class="project-actions">
+              <button class="case-study-button" type="button" data-case-study="nibblium"
+                data-i18n="readCase">Baca studi kasus</button>
+              <a href="https://nibblium.com" target="_blank" rel="noopener"><span data-i18n="liveSite">Situs live</span>
+                ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card project-wide reveal" data-category="operations">
+            <div class="project-brand polyta-cover">
+              <span>POLYTA</span>
+              <small>Internal Apps</small>
+              <i aria-hidden="true">P</i>
+            </div>
+            <div class="project-meta">
+              <div>
+                <p>Product • Manufacturing Operations</p>
+                <h3>Polyta Internal Apps</h3>
+              </div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="project-description" data-i18n="polytaAppsDesc">Aplikasi internal dalam pengembangan untuk
+              membantu menata data dan alur kerja industri manufaktur plastik dengan PHP, SQL, dan Laragon.</p>
+            <div class="project-actions">
+              <button class="case-study-button" type="button" data-case-study="polyta"
+                data-i18n="readCase">Baca studi kasus</button>
+              <span class="private-badge" data-i18n="internalProject">Proyek internal</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="web">
+            <div class="project-image">
+              <img src="images/portfolio1.jpg" alt="Tampilan proyek website e-commerce INDIT" loading="lazy"
+                width="640" height="426">
+            </div>
+            <div class="project-meta">
+              <div>
+                <p>Web Development • E-commerce</p>
+                <h3>INDIT Commerce</h3>
+              </div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="project-description" data-i18n="inditDesc">Aplikasi web e-commerce dengan pengalaman belanja dan
+              area administrasi sebagai satu alur operasional.</p>
+            <div class="project-actions">
+              <button class="case-study-button" type="button" data-case-study="indit" data-i18n="readCase">Baca studi
+                kasus</button>
+              <span class="private-badge" data-i18n="privateProject">Proyek privat</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="web">
+            <div class="project-brand kerupuk-cover">
+              <span>KERUPUK</span>
+              <small>Nusantara</small>
+              <i aria-hidden="true">K</i>
+            </div>
+            <div class="project-meta">
+              <div>
+                <p>Website • HTML / CSS / JS</p>
+                <h3>Kerupuk Nusantara</h3>
+              </div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="project-description" data-i18n="kerupukDesc">Website katalog kuliner untuk memperkenalkan produk
+              lokal dengan pengalaman yang ringan dan mudah diakses.</p>
+            <div class="project-actions">
+              <button class="case-study-button" type="button" data-case-study="kerupuk" data-i18n="readCase">Baca studi
+                kasus</button>
+              <a href="https://zulfisidqilwafa.github.io/kerupuk_nusantara/" target="_blank" rel="noopener">Demo ↗</a>
+              <a href="https://github.com/Zulfisidqilwafa/kerupuk_nusantara" target="_blank"
+                rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="web">
+            <div class="project-brand story-cover">
+              <span>STORY</span>
+              <small>Interactive Web</small>
+              <i aria-hidden="true">S</i>
+            </div>
+            <div class="project-meta">
+              <div>
+                <p>Creative Web • HTML / CSS / JS</p>
+                <h3>Interactive Story</h3>
+              </div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="project-description" data-i18n="storyDesc">Eksperimen storytelling web yang menggabungkan
+              visual, interaksi, dan audio dalam pengalaman personal.</p>
+            <div class="project-actions">
+              <button class="case-study-button" type="button" data-case-study="story" data-i18n="readCase">Baca studi
+                kasus</button>
+              <a href="https://zulfisidqilwafa.github.io/story/" target="_blank" rel="noopener">Demo ↗</a>
+              <a href="https://github.com/Zulfisidqilwafa/story" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="operations">
+            <div class="project-brand excel-cover">
+              <span>EXCEL</span>
+              <small>Operational Data</small>
+              <i aria-hidden="true">X</i>
+            </div>
+            <div class="project-meta">
+              <div>
+                <p>Data Operations • Microsoft Excel</p>
+                <h3>Excel & Cloud Data Operations</h3>
+              </div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="project-description" data-i18n="excelOpsDesc">Pelacakan data, pengelolaan rumus dan conditional
+              formatting, serta pencadangan spreadsheet lokal ke Google Drive dan OneDrive.</p>
+            <div class="project-actions">
+              <button class="case-study-button" type="button" data-case-study="excel"
+                data-i18n="readCase">Baca studi kasus</button>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="infrastructure">
+            <div class="project-image">
+              <img src="images/portfolio3.jpg" alt="Perangkat dan kabel jaringan yang sedang dikonfigurasi"
+                loading="lazy" width="640" height="426">
+            </div>
+            <div class="project-meta">
+              <div>
+                <p>Infrastructure • Network</p>
+                <h3>Network Operations</h3>
+              </div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="project-description" data-i18n="networkProjectDesc">Konfigurasi, monitoring, dan pemeliharaan
+              jaringan untuk mendukung konektivitas operasional.</p>
+            <div class="project-actions">
+              <button class="case-study-button" type="button" data-case-study="network" data-i18n="readCase">Baca studi
+                kasus</button>
+            </div>
+          </article>
+
+          <article class="project-card project-wide reveal" data-category="infrastructure">
+            <div class="project-image">
+              <img src="images/portfolio6.jpg" alt="Proses pemulihan sistem komputer" loading="lazy" width="640"
+                height="426">
+            </div>
+            <div class="project-meta">
+              <div>
+                <p>IT Operations • Continuity</p>
+                <h3>Backup, Maintenance & Recovery</h3>
+              </div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="project-description" data-i18n="continuityDesc">Pendekatan berlapis untuk menjaga perangkat,
+              melindungi data, dan memulihkan sistem ketika terjadi gangguan.</p>
+            <div class="project-actions">
+              <button class="case-study-button" type="button" data-case-study="continuity"
+                data-i18n="readCase">Baca studi kasus</button>
+            </div>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="portfolio-box">
-        <img src="images/portfolio6.jpg" alt="">
-        <div class="portfolio-layer">
-          <h4>Recovery</h4>
-          <p>Melakukan pemulihan data sistem dan data program aplikasi ketika terjadi kerusakan</p>
-          <a href=""><i class='bx bx-link-external'></i></a>
+    <section class="section journey-section" id="perjalanan" aria-labelledby="journey-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-index" data-i18n="journeyIndex">04 / Perjalanan</p>
+            <h2 id="journey-title" data-i18n-html="journeyTitle">Fondasi teknis yang kuat.<br><em>Arah produk yang
+                terus tumbuh.</em></h2>
+          </div>
+          <p class="section-intro" data-i18n="journeyIntro">Perjalanan saya bergerak dari fondasi komputer dan jaringan,
+            ke peran IT dan PPIC di manufaktur, pengelolaan data, hingga pengembangan aplikasi dan produk full-stack.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span>01</span>
+            <div>
+              <p class="card-label" data-i18n="foundation">Fondasi</p>
+              <h3 data-i18n="foundationTitle">Teknik Komputer & Jaringan</h3>
+              <p data-i18n="foundationDesc">Belajar memahami perangkat, server, pengkabelan, dan bagaimana sebuah
+                infrastruktur saling terhubung.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>02</span>
+            <div>
+              <p class="card-label" data-i18n="operations">Operasional</p>
+              <h3>Staff IT & PPIC — PT Polyta Global Mandiri</h3>
+              <p data-i18n="operationsDesc">Menerapkan pengetahuan teknis untuk mendukung pengguna, sistem, perencanaan
+                produksi, pengendalian persediaan, dan kebutuhan data operasional.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>03</span>
+            <div>
+              <p class="card-label" data-i18n="internalSystems">Sistem internal</p>
+              <h3>PHP, SQL, Excel & Polyta Internal Apps</h3>
+              <p data-i18n="internalSystemsDesc">Mengembangkan fondasi aplikasi internal dan memperkuat pengelolaan
+                spreadsheet untuk kebutuhan operasional manufaktur.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span>04</span>
+            <div>
+              <p class="card-label" data-i18n="productGrowth">Pertumbuhan produk</p>
+              <h3>Golang, React & Nibblium</h3>
+              <p data-i18n="productGrowthDesc">Memperluas fokus dari dukungan sistem menjadi pembangunan produk digital
+                secara end-to-end.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="journey-cta reveal">
+          <p data-i18n="journeyCta">Ingin melihat detail pengalaman dan kemampuan dalam format ringkas?</p>
+          <a class="button button-primary" href="cv/zulfisidqilwafa.pdf" target="_blank" rel="noopener">
+            <span data-i18n="downloadCv">Unduh CV terbaru</span> <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- contact section design -->
+    <section class="contact-section" id="kontak" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="section-index" data-i18n="contactIndex">05 / Kontak</p>
+          <h2 id="contact-title" data-i18n-html="contactTitle">Punya ide atau sistem<br><em>yang perlu
+              dibereskan?</em></h2>
+          <p data-i18n="contactIntro">Ceritakan kebutuhan Anda. Pesan dapat dikirim langsung ke WhatsApp tanpa
+            menyimpan data pribadi di website ini.</p>
 
-  <section class="contact" id="contact">
-    <h2 class="heading">Kontak <span>Saya!</span></h2>
+          <div class="contact-links">
+            <a href="mailto:zulfisidqilwafa@gmail.com">
+              <span>Email</span>
+              <strong>zulfisidqilwafa@gmail.com</strong>
+            </a>
+            <a href="https://wa.me/6282115834047" target="_blank" rel="noopener">
+              <span>WhatsApp</span>
+              <strong>+62 821 1583 4047</strong>
+            </a>
+            <a href="https://github.com/Zulfisidqilwafa" target="_blank" rel="noopener">
+              <span>GitHub</span>
+              <strong>@Zulfisidqilwafa</strong>
+            </a>
+          </div>
 
-    <form action="#">
-      <div class="input-box">
-        <div class="input-field field">
-          <input type="text" placeholder="Nama Lengkap" id="name" class="item" autocomplete="off">
-          <div class="error-txt">Nama Lengkap wajib diisi</div>
+          <div class="social-links" aria-label="Media sosial">
+            <a href="https://www.instagram.com/zulfi_sidqil_wafa" target="_blank" rel="noopener">Instagram ↗</a>
+            <a href="https://www.youtube.com/channel/UCRnHvNKlamJaEKf3JYuEDiQ" target="_blank"
+              rel="noopener">YouTube ↗</a>
+            <a href="https://www.tiktok.com/@zulfisidqilwafa" target="_blank" rel="noopener">TikTok ↗</a>
+            <a href="https://m.facebook.com/zulfi.s.wafa/" target="_blank" rel="noopener">Facebook ↗</a>
+          </div>
         </div>
-        <div class="input-field field">
-          <input type="text" placeholder="Alamat Email" id="email" class="item" autocomplete="off">
-          <div class="error-txt email">Email Lengkap wajib diisi</div>
-        </div>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-heading">
+            <span data-i18n="sendMessage">Kirim pesan langsung</span>
+            <span aria-hidden="true">↘</span>
+          </div>
+
+          <div class="form-field">
+            <label for="name" data-i18n="nameLabel">Nama</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Nama lengkap"
+              data-i18n-placeholder="namePlaceholder" required>
+            <small class="field-error" data-i18n="nameError">Mohon isi nama Anda.</small>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="nama@email.com"
+              data-i18n-placeholder="emailPlaceholder" required>
+            <small class="field-error" data-i18n="emailError">Masukkan alamat email yang valid.</small>
+          </div>
+
+          <div class="form-field">
+            <label for="subject" data-i18n="subjectLabel">Subjek</label>
+            <input type="text" id="subject" name="subject" placeholder="Apa yang ingin didiskusikan?"
+              data-i18n-placeholder="subjectPlaceholder" required>
+            <small class="field-error" data-i18n="subjectError">Mohon isi subjek pesan.</small>
+          </div>
+
+          <div class="form-field">
+            <label for="message" data-i18n="messageLabel">Pesan</label>
+            <textarea id="message" name="message" rows="5" placeholder="Ceritakan kebutuhan Anda..."
+              data-i18n-placeholder="messagePlaceholder" required></textarea>
+            <small class="field-error" data-i18n="messageError">Mohon tulis pesan Anda.</small>
+          </div>
+
+          <div class="honeypot" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button class="button button-dark" type="submit">
+            <span data-i18n="sendWhatsapp">Kirim ke WhatsApp</span> <span aria-hidden="true">↗</span>
+          </button>
+          <p class="form-note" data-i18n="privacyNote">Anda akan meninjau pesan di WhatsApp sebelum benar-benar
+            mengirimnya. Website ini tidak menyimpan isi pesan.</p>
+        </form>
       </div>
+    </section>
+  </main>
 
-      <div class="input-box">
-        <div class="input-field field ">
-          <input type="text" placeholder="Nomor Telepon" id="phone" class="item" autocomplete="off">
-          <div class="error-txt">Phone can't be blank</div>
-        </div>
-        <div class="input-field field">
-          <input type="text" placeholder="Subjek" id="subject" class="item" autocomplete="off">
-          <div class="error-txt">Subject wajib diisi</div>
-        </div>
-      </div>
-
-      <div class="textarea-field field">
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Tulis Pesan" class="item"
-          autocomplete="off"></textarea>
-        <div class="error-txt">Pesan wajib diisi</div>
-      </div>
-      <button type="submit" class="btn">Kirim Pesan</button>
-    </form>
-  </section>
-
-  <!-- footer design -->
-
-  <footer class="footer">
-    <div class="footer-text">
-      <p>copyright &copy; 2023 Zulfi Sidqil Wafa | All Right Reserved.</p>
-    </div>
-
-    <div class="footer-iconTop">
-      <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#home" class="footer-brand">ZSW<span>.</span></a>
+      <p>© <span id="current-year">2026</span> Zulfi Sidqil Wafa. <span data-i18n="footerCopy">Dibangun untuk terus
+          berkembang.</span></p>
+      <a href="#home" class="back-to-top" data-i18n="backTop">Kembali ke atas ↑</a>
     </div>
   </footer>
 
+  <dialog class="case-dialog" id="case-dialog" aria-labelledby="case-title">
+    <div class="case-dialog-inner">
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="Tutup studi kasus">×</button>
+      <p class="case-eyebrow" id="case-eyebrow"></p>
+      <h2 id="case-title"></h2>
+      <p class="case-summary" id="case-summary"></p>
+      <div class="case-detail-grid">
+        <div>
+          <span data-i18n="caseChallenge">Tantangan</span>
+          <p id="case-challenge"></p>
+        </div>
+        <div>
+          <span data-i18n="caseContribution">Kontribusi</span>
+          <p id="case-contribution"></p>
+        </div>
+        <div>
+          <span data-i18n="caseOutput">Hasil kerja</span>
+          <p id="case-output"></p>
+        </div>
+        <div>
+          <span>Tools / Scope</span>
+          <p id="case-tools"></p>
+        </div>
+      </div>
+      <div class="case-dialog-actions" id="case-links"></div>
+    </div>
+  </dialog>
 
-  <!-- scroll reveal -->
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript>Website ini tetap dapat dibaca tanpa JavaScript, tetapi filter, bahasa, dan formulir langsung memerlukan
+    JavaScript.</noscript>
 
-  <!-- typed js -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-  <!-- smtjs Email koneksi -->
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-
-  <!-- alert contact -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-  <!-- custom js -->
   <script src="script.js"></script>
 </body>
 
