@@ -1036,11 +1036,6 @@ em {
   color: var(--paper-strong);
 }
 
-.excel-cover {
-  background: #167c55;
-  color: var(--paper-strong);
-}
-
 .project-image::after {
   background: linear-gradient(180deg, transparent 60%, rgba(11, 17, 16, 0.32));
   content: "";
