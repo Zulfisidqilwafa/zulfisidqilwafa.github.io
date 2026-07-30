@@ -83,7 +83,7 @@ def build_cv(path):
 
     c.setTitle("Zulfi Sidqil Wafa - CV 2026")
     c.setAuthor("Zulfi Sidqil Wafa")
-    c.setSubject("IT, PPIC, and Full-stack Development")
+    c.setSubject("Full-stack Developer")
 
     c.setFillColor(PAPER)
     c.rect(0, 0, page_width, page_height, fill=1, stroke=0)
@@ -111,14 +111,14 @@ def build_cv(path):
     left = 38
     c.setFillColor(MINT)
     c.setFont("Courier-Bold", 8)
-    c.drawString(left, page_height - 42, "IT / PPIC / FULL-STACK DEVELOPMENT")
+    c.drawString(left, page_height - 42, "FULL-STACK DEVELOPER")
     c.setFillColor(WHITE)
     c.setFont("Helvetica-Bold", 27)
     c.drawString(left, page_height - 79, "ZULFI SIDQIL")
     c.drawString(left, page_height - 108, "WAFA")
     c.setFillColor(HexColor("#A7B5B1"))
     c.setFont("Helvetica", 8.2)
-    c.drawString(left, page_height - 137, "PHP + SQL | Excel & PPIC | IT Systems | Network")
+    c.drawString(left, page_height - 137, "PHP + SQL | GOLANG + REACT | WEB APPLICATIONS")
 
     contact_y = page_height - 159
     contact_items = [
@@ -144,27 +144,27 @@ def build_cv(path):
 
     y = section_label(c, "Profile", main_x, content_top, main_width)
     profile = (
-        "IT and PPIC professional in plastic manufacturing with a computer-network foundation. "
-        "I connect application development, operational data, production planning, inventory "
-        "control, devices, software, and networks."
+        "Full-stack Developer focused on translating business requirements into structured "
+        "web applications. I work across database design, backend logic, responsive interfaces, "
+        "debugging, and delivery."
     )
     y = draw_wrapped(c, profile, main_x, y, main_width, size=8.5, leading=12, color=INK) - 13
 
     y = section_label(c, "Experience", main_x, y, main_width)
     y = entry(
         c,
-        "Staff IT & PPIC",
-        "PT POLYTA GLOBAL MANDIRI | MANUFACTURING OPERATIONS",
-        "Supporting IT systems, users, production planning, inventory control, and operational data tracking in a plastic manufacturing environment.",
+        "Internal Application Development",
+        "PT POLYTA GLOBAL MANDIRI | WEB APPLICATION",
+        "Developing an internal application and database foundation with PHP, SQL, and Laragon to support company needs.",
         main_x,
         y,
         main_width,
     )
     y = entry(
         c,
-        "Technology & Systems",
-        "NIBBLIUM | PRODUCT",
-        "Supporting a snack business transformation through a connected digital product and more adaptive operational systems.",
+        "Full-stack Product Development",
+        "NIBBLIUM | DIGITAL PRODUCT",
+        "Translating business needs, content structure, and user flows into a connected responsive web experience.",
         main_x,
         y,
         main_width,
@@ -181,8 +181,8 @@ def build_cv(path):
             "Product website, catalog, brand story, team profile, and contact flow.",
         ),
         (
-            "Excel & Cloud Data Operations",
-            "Operational tracking, formulas, conditional formatting, and cloud backup.",
+            "INDIT Commerce",
+            "E-commerce experience and administration dashboard concept.",
         ),
         (
             "Kerupuk Nusantara",
@@ -198,7 +198,7 @@ def build_cv(path):
 
     side_y = section_label(c, "Core Skills", side_x, content_top, side_width)
     pill_width = 74
-    pills = ["PHP", "SQL", "Excel", "PPIC", "Golang", "React", "Networking", "Hardware"]
+    pills = ["PHP", "SQL", "Golang", "React", "JavaScript", "REST API", "Git", "Database"]
     for index, label in enumerate(pills):
         column = index % 2
         row = index // 2
@@ -250,7 +250,7 @@ def build_cv(path):
     c.roundRect(panel_x, panel_y, panel_width, panel_height, 8, fill=1, stroke=0)
     c.setFillColor(MINT)
     c.setFont("Courier-Bold", 7.4)
-    c.drawString(panel_x + 16, panel_y + panel_height - 22, "VALUE I BRING")
+    c.drawString(panel_x + 16, panel_y + panel_height - 22, "HOW I BUILD")
 
     value_items = [
         (
@@ -258,12 +258,12 @@ def build_cv(path):
             "Turn business needs into clear product flows and practical web implementations.",
         ),
         (
-            "OPERATE",
-            "Keep devices, software, and network infrastructure dependable day to day.",
+            "DESIGN",
+            "Shape requirements into data models, modules, and clear user flows.",
         ),
         (
-            "PLAN",
-            "Connect production planning, inventory control, and operational data into actionable work.",
+            "DELIVER",
+            "Debug, test, version, and deploy implementations that can keep evolving.",
         ),
     ]
     value_width = 151

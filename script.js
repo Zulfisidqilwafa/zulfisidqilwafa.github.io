@@ -25,21 +25,21 @@ const english = {
   viewCv: "View CV",
   available: "Open to collaborate",
   location: "Indonesia • UTC+7",
-  heroTitle: "Connecting software, data,<br><em>and manufacturing operations.</em>",
+  heroTitle: "Building web applications.<br><em>From database to interface.</em>",
   heroLead:
-    "I’m Zulfi—an IT and PPIC professional in plastic manufacturing who builds applications, manages operational data, and keeps devices and networks reliable.",
+    "I’m Zulfi—a Full-stack Developer who translates business needs into structured, responsive, and maintainable web applications.",
   exploreWork: "Explore my work",
   discuss: "Let’s talk",
   proofYears: "years growing<br>with technology",
-  proofPublic: "public projects<br>ready to explore",
-  proofEnd: "code, data<br>and operations",
+  proofPublic: "selected projects<br>and applications",
+  proofEnd: "backend, frontend<br>and database",
   profileIndex: "01 / Profile",
   profileTitle: "Technology that works<br><em>for people.</em>",
   profileIntro:
-    "Curiosity about how video games work led me into IT at the age of 10. Today, I connect technology, production planning, inventory control, and data to support manufacturing operations.",
+    "I build web applications end to end: understanding requirements, designing databases and system flows, writing backend logic, and delivering clear responsive interfaces.",
   currentRole: "Professional role",
   polytaDescription:
-    "Supporting IT systems while contributing to production planning, inventory control, and operational data tracking across the company.",
+    "Developing an internal application and database foundation with PHP, SQL, and Laragon to support company needs.",
   visitCompany: "Visit company",
   ventureRole: "Product in development",
   nibbliumDescription:
@@ -55,33 +55,34 @@ const english = {
   expertiseIndex: "02 / Expertise",
   expertiseTitle: "From idea to operations,<br><em>I connect the dots.</em>",
   expertiseIntro:
-    "A cross-functional approach to understanding manufacturing needs, building solutions, organizing data, and keeping products and systems stable in real use.",
+    "A full-stack approach to turning requirements into architecture, code, and user experiences that can keep evolving.",
   fullstackDesc:
-    "Building web applications with PHP, SQL, Golang, and React, from databases and business logic to responsive user interfaces.",
-  systemDesign: "System design",
+    "Building organized application logic, data structures, and backend services with PHP, Golang, and SQL.",
+  businessLogic: "Business logic",
   networkDesc:
-    "Keeping devices, servers, and connections stable through configuration, monitoring, and routine maintenance.",
-  installation: "Installation & configuration",
-  monitoring: "Network monitoring",
-  maintenance: "Device maintenance",
-  securityDesc: "Reducing risk, maintaining local and cloud backups, and restoring data and services after disruptions.",
-  ppicTitle: "PPIC & Manufacturing Data",
-  ppicDesc:
-    "Connecting production planning, inventory control, and operational data so work information is more structured and actionable.",
-  productionPlanning: "Production planning",
-  inventoryControl: "Inventory control",
-  dataQuality: "Data quality & structure",
+    "Developing responsive interfaces and clear web interactions with React, JavaScript, HTML, and CSS.",
+  responsiveUi: "Responsive UI",
+  webInteraction: "Web interaction",
+  securityDesc:
+    "Translating business requirements into consistent, maintainable data models, modules, and application flows.",
+  requirementAnalysis: "Requirement analysis",
+  dataModeling: "Data modeling",
+  modularArchitecture: "Modular architecture",
+  deliveryTitle: "Delivery & Reliability",
+  deliveryDesc:
+    "Maintaining implementation quality through version control, debugging, testing, and structured deployment.",
+  testing: "Testing",
+  deployment: "Deployment",
   workIndex: "03 / Work",
   workTitle: "More than an interface.<br><em>A real problem gets solved.</em>",
   workIntro:
-    "A selection of public products, internal applications, and operational work. Open each card to see the context, contribution, and deliverable.",
+    "A selection of internal applications, business products, and web experiments. Open each card to see the problem, technical contribution, and implementation.",
   filterAll: "All",
-  filterOperations: "Data & PPIC",
-  filterInfrastructure: "Infrastructure",
+  filterApplication: "Application",
   nibbliumProjectDesc:
     "A digital product supporting a snack business through product discovery, brand storytelling, and more adaptive operations.",
   polytaAppsDesc:
-    "An internal application in development to organize data and workflows in plastic manufacturing using PHP, SQL, and Laragon.",
+    "An internal web application in development with PHP, SQL, and Laragon, focused on structured data and maintainable workflows.",
   internalProject: "Internal project",
   readCase: "Read case study",
   liveSite: "Live site",
@@ -92,33 +93,27 @@ const english = {
     "A lightweight culinary catalog website that introduces local products through an accessible experience.",
   storyDesc:
     "A web storytelling experiment combining visuals, interaction, and audio into a personal experience.",
-  excelOpsDesc:
-    "Operational data tracking, formula and conditional-formatting management, plus local spreadsheet backup to Google Drive and OneDrive.",
-  networkProjectDesc:
-    "Network configuration, monitoring, and maintenance supporting reliable operational connectivity.",
-  continuityDesc:
-    "A layered approach to maintaining devices, protecting data, and restoring systems after disruptions.",
   journeyIndex: "04 / Journey",
-  journeyTitle: "A strong technical foundation.<br><em>A product direction that keeps growing.</em>",
+  journeyTitle: "From technical foundations.<br><em>To Full-stack Developer.</em>",
   journeyIntro:
-    "My path moves from computer-network fundamentals to IT and PPIC in manufacturing, operational data management, and full-stack application development.",
+    "My path has grown from computer and web fundamentals to backend, databases, frontend, and end-to-end product development.",
   foundation: "Foundation",
-  foundationTitle: "Computer & Network Engineering",
+  foundationTitle: "Computer & Web Foundations",
   foundationDesc:
-    "Learning how devices, servers, cabling, and infrastructure work together as one connected system.",
-  operations: "Operations",
+    "Building an understanding of computers, servers, networks, and web technologies as a software-development foundation.",
+  operations: "Backend",
   operationsDesc:
-    "Applying technical knowledge to users, systems, production planning, inventory control, and operational data needs.",
-  internalSystems: "Internal systems",
+    "Learning and applying backend logic, data relationships, and local development with Laragon.",
+  internalSystems: "Full-stack",
   internalSystemsDesc:
-    "Building an internal application foundation and strengthening spreadsheet operations for manufacturing needs.",
-  productGrowth: "Product growth",
+    "Expanding from backend and databases into modern interfaces and end-to-end application development.",
+  productGrowth: "Product delivery",
   productGrowthDesc:
-    "Expanding from systems support into end-to-end digital product development.",
+    "Translating business needs into structured internal applications and web products that can keep evolving.",
   journeyCta: "Want the details of my experience and skills in one concise document?",
   downloadCv: "Download latest CV",
   contactIndex: "05 / Contact",
-  contactTitle: "Have an idea or system<br><em>that needs attention?</em>",
+  contactTitle: "Have an application idea<br><em>worth building?</em>",
   contactIntro:
     "Tell me what you need. Your message can go directly to WhatsApp without storing personal data on this website.",
   sendMessage: "Send a direct message",
@@ -146,31 +141,31 @@ const english = {
 const caseStudies = {
   id: {
     nibblium: {
-      eyebrow: "Product • Technology & Systems",
+      eyebrow: "Product • Full-stack Web",
       title: "Nibblium Digital Experience",
       summary:
         "Membawa cerita, produk, dan operasional bisnis camilan ke dalam pengalaman digital yang terhubung.",
       challenge:
         "Bisnis membutuhkan titik temu digital untuk memperkenalkan produk, membangun kepercayaan, dan mendukung cara kerja yang lebih adaptif.",
       contribution:
-        "Berperan pada sisi Technology & Systems: menerjemahkan kebutuhan bisnis ke pengalaman web dan arah sistem operasional.",
+        "Menerjemahkan kebutuhan bisnis, struktur konten, dan alur pengguna menjadi pengalaman web yang responsif dan terhubung.",
       output:
         "Website publik dengan katalog produk, cerita perjalanan bisnis, profil tim, dan kanal kontak.",
-      tools: "Product thinking, web development, systems operations",
+      tools: "Product thinking, web development, responsive UI, content architecture",
       links: [{ label: "Buka situs live", url: "https://nibblium.com" }]
     },
     polyta: {
-      eyebrow: "Product • Manufacturing Operations",
+      eyebrow: "Web Application • PHP / SQL",
       title: "Polyta Internal Apps",
       summary:
-        "Fondasi aplikasi internal untuk membantu menata data dan alur kerja pada perusahaan manufaktur plastik.",
+        "Fondasi aplikasi internal dengan struktur database dan alur web yang dapat dikembangkan bertahap.",
       challenge:
-        "Kebutuhan lintas IT dan PPIC memerlukan data yang lebih terstruktur serta alur internal yang mudah dikembangkan secara bertahap.",
+        "Aplikasi internal membutuhkan struktur data yang jelas, modul yang terpisah, dan lingkungan pengembangan lokal yang mudah dirawat.",
       contribution:
         "Menyusun basis data polyta_internal_apps dan mengembangkan arah aplikasi web menggunakan PHP, SQL, serta Laragon sebagai lingkungan pengembangan lokal.",
       output:
         "Fondasi aplikasi dan basis data internal dalam tahap pengembangan. Detail data perusahaan tidak dipublikasikan.",
-      tools: "PHP, SQL, Laragon, database design, manufacturing workflow",
+      tools: "PHP, SQL, Laragon, database design, system analysis",
       links: []
     },
     indit: {
@@ -218,77 +213,35 @@ const caseStudies = {
         { label: "Buka demo", url: "https://zulfisidqilwafa.github.io/story/" },
         { label: "Lihat GitHub", url: "https://github.com/Zulfisidqilwafa/story" }
       ]
-    },
-    excel: {
-      eyebrow: "Data Operations • Microsoft Excel",
-      title: "Excel & Cloud Data Operations",
-      summary:
-        "Mengelola spreadsheet operasional dari pelacakan data hingga pencadangan cloud dan perbaikan referensi rumus.",
-      challenge:
-        "Pemindahan workbook lokal ke Google Drive atau OneDrive dapat memutus referensi sheet eksternal dan mengganggu kesinambungan data.",
-      contribution:
-        "Menata data, formula, dan conditional formatting di Microsoft Excel; mengelola pencadangan cloud; serta menelusuri error referensi sheet saat transfer file.",
-      output:
-        "Workbook operasional yang lebih terawat, salinan cloud yang tersedia, dan referensi formula yang dapat dipulihkan ketika bermasalah.",
-      tools: "Microsoft Excel, formulas, conditional formatting, Google Drive, OneDrive",
-      links: []
-    },
-    network: {
-      eyebrow: "Infrastructure • Network",
-      title: "Network Operations",
-      summary:
-        "Menjaga konektivitas operasional melalui konfigurasi, pemantauan, dan penanganan gangguan.",
-      challenge:
-        "Koneksi yang tidak stabil dapat menghambat akses sistem dan aktivitas pengguna sehari-hari.",
-      contribution:
-        "Menjalankan konfigurasi, memantau kondisi jaringan, memperbarui perangkat, dan melakukan troubleshooting.",
-      output:
-        "Jaringan yang terawat dengan dokumentasi pekerjaan dan tindakan korektif sesuai kondisi lapangan.",
-      tools: "Network configuration, monitoring, cabling, troubleshooting",
-      links: []
-    },
-    continuity: {
-      eyebrow: "IT Operations • Continuity",
-      title: "Backup, Maintenance & Recovery",
-      summary:
-        "Menjaga perangkat dan data tetap siap digunakan melalui pemeliharaan serta langkah pemulihan.",
-      challenge:
-        "Gangguan hardware, software, malware, atau kesalahan pengguna dapat menghambat operasional dan menghilangkan data.",
-      contribution:
-        "Melakukan pemeliharaan, pencadangan, diagnosis, dan pemulihan sistem maupun data sesuai kebutuhan.",
-      output:
-        "Perangkat kembali siap pakai, risiko kehilangan data berkurang, dan proses pemulihan lebih terarah.",
-      tools: "Hardware, operating systems, backup, recovery, IT support",
-      links: []
     }
   },
   en: {
     nibblium: {
-      eyebrow: "Product • Technology & Systems",
+      eyebrow: "Product • Full-stack Web",
       title: "Nibblium Digital Experience",
       summary:
         "Bringing a snack business story, products, and operations into one connected digital experience.",
       challenge:
         "The business needed a digital touchpoint to introduce products, build trust, and support more adaptive operations.",
       contribution:
-        "Contributing across Technology & Systems by translating business needs into a web experience and operational direction.",
+        "Translating business needs, content structure, and user flows into a connected responsive web experience.",
       output:
         "A public website featuring product discovery, the business journey, team profiles, and contact channels.",
-      tools: "Product thinking, web development, systems operations",
+      tools: "Product thinking, web development, responsive UI, content architecture",
       links: [{ label: "Open live site", url: "https://nibblium.com" }]
     },
     polyta: {
-      eyebrow: "Product • Manufacturing Operations",
+      eyebrow: "Web Application • PHP / SQL",
       title: "Polyta Internal Apps",
       summary:
-        "An internal application foundation designed to organize data and workflows in a plastic manufacturing company.",
+        "An internal application foundation with a database structure and web flow that can evolve incrementally.",
       challenge:
-        "Cross-functional IT and PPIC needs require more structured data and an internal workflow that can evolve incrementally.",
+        "An internal application needs a clear data structure, separated modules, and a maintainable local development environment.",
       contribution:
         "Designing the polyta_internal_apps database and shaping the web application with PHP, SQL, and Laragon as the local development environment.",
       output:
         "An internal application and database foundation currently in development. Company data details are not published.",
-      tools: "PHP, SQL, Laragon, database design, manufacturing workflow",
+      tools: "PHP, SQL, Laragon, database design, system analysis",
       links: []
     },
     indit: {
@@ -336,48 +289,6 @@ const caseStudies = {
         { label: "Open demo", url: "https://zulfisidqilwafa.github.io/story/" },
         { label: "View GitHub", url: "https://github.com/Zulfisidqilwafa/story" }
       ]
-    },
-    excel: {
-      eyebrow: "Data Operations • Microsoft Excel",
-      title: "Excel & Cloud Data Operations",
-      summary:
-        "Managing operational spreadsheets from data tracking to cloud backup and formula-reference recovery.",
-      challenge:
-        "Moving local workbooks to Google Drive or OneDrive can break external sheet references and disrupt data continuity.",
-      contribution:
-        "Structuring data, formulas, and conditional formatting in Microsoft Excel; managing cloud backups; and tracing unresolved sheet-reference errors during file transfers.",
-      output:
-        "More maintainable operational workbooks, available cloud copies, and formula references that can be restored when issues occur.",
-      tools: "Microsoft Excel, formulas, conditional formatting, Google Drive, OneDrive",
-      links: []
-    },
-    network: {
-      eyebrow: "Infrastructure • Network",
-      title: "Network Operations",
-      summary:
-        "Maintaining operational connectivity through configuration, monitoring, and incident response.",
-      challenge:
-        "Unstable connectivity can interrupt system access and everyday user activities.",
-      contribution:
-        "Configuring and monitoring the network, updating devices, and troubleshooting issues.",
-      output:
-        "A maintained network with work documentation and corrective actions based on field conditions.",
-      tools: "Network configuration, monitoring, cabling, troubleshooting",
-      links: []
-    },
-    continuity: {
-      eyebrow: "IT Operations • Continuity",
-      title: "Backup, Maintenance & Recovery",
-      summary:
-        "Keeping devices and data ready through maintenance, backup, and recovery procedures.",
-      challenge:
-        "Hardware, software, malware, or user errors can interrupt operations and cause data loss.",
-      contribution:
-        "Performing maintenance, backups, diagnosis, and system or data recovery as needed.",
-      output:
-        "Devices returned to service, reduced data-loss risk, and a more structured recovery process.",
-      tools: "Hardware, operating systems, backup, recovery, IT support",
-      links: []
     }
   }
 };
