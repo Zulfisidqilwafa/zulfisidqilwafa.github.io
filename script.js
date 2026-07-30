@@ -483,6 +483,79 @@ document.querySelectorAll(".reveal").forEach((element, index) => {
   revealObserver.observe(element);
 });
 
+const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const precisePointerQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
+const supportsDimensionalMotion = () => !reducedMotionQuery.matches && precisePointerQuery.matches;
+
+let pointerFrame;
+window.addEventListener(
+  "pointermove",
+  (event) => {
+    if (!supportsDimensionalMotion()) return;
+    window.cancelAnimationFrame(pointerFrame);
+    pointerFrame = window.requestAnimationFrame(() => {
+      document.body.style.setProperty("--pointer-x", `${event.clientX}px`);
+      document.body.style.setProperty("--pointer-y", `${event.clientY}px`);
+      document.body.classList.add("pointer-active");
+    });
+  },
+  { passive: true }
+);
+
+document.documentElement.addEventListener("mouseleave", () => {
+  document.body.classList.remove("pointer-active");
+});
+
+const registerTilt = (element, defaultStrength) => {
+  let tiltFrame;
+  const strength = Number(element.dataset.tiltStrength ?? defaultStrength);
+
+  element.addEventListener(
+    "pointermove",
+    (event) => {
+      if (!supportsDimensionalMotion()) return;
+      const bounds = element.getBoundingClientRect();
+      const horizontal = (event.clientX - bounds.left) / bounds.width;
+      const vertical = (event.clientY - bounds.top) / bounds.height;
+      const rotateY = (horizontal - 0.5) * strength * 2;
+      const rotateX = (0.5 - vertical) * strength * 2;
+
+      window.cancelAnimationFrame(tiltFrame);
+      tiltFrame = window.requestAnimationFrame(() => {
+        element.style.setProperty("--tilt-x", `${rotateX.toFixed(2)}deg`);
+        element.style.setProperty("--tilt-y", `${rotateY.toFixed(2)}deg`);
+        element.style.setProperty("--spot-x", `${(horizontal * 100).toFixed(1)}%`);
+        element.style.setProperty("--spot-y", `${(vertical * 100).toFixed(1)}%`);
+        element.classList.add("is-tilting");
+      });
+    },
+    { passive: true }
+  );
+
+  element.addEventListener("pointerleave", () => {
+    window.cancelAnimationFrame(tiltFrame);
+    element.style.setProperty("--tilt-x", "0deg");
+    element.style.setProperty("--tilt-y", "0deg");
+    element.style.setProperty("--spot-x", "50%");
+    element.style.setProperty("--spot-y", "50%");
+    element.classList.remove("is-tilting");
+  });
+};
+
+document.querySelectorAll("[data-tilt]").forEach((element) => registerTilt(element, 7));
+
+document
+  .querySelectorAll(".experience-card, .education-card, .service-card, .journey-cta")
+  .forEach((element) => {
+    element.classList.add("tilt-card");
+    registerTilt(element, 3.5);
+  });
+
+document.querySelectorAll(".project-image, .project-brand").forEach((element) => {
+  element.classList.add("depth-surface");
+  registerTilt(element, 4.5);
+});
+
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const selectedFilter = button.dataset.filter;
