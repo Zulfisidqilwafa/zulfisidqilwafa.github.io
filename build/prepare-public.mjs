@@ -12,7 +12,7 @@ await cp(resolve(root, "images"), resolve(publicDirectory, "images"), {
   recursive: true,
 });
 await cp(
-  resolve(root, "images", "og-portfolio-v4.png"),
+  resolve(root, "images", "og-portfolio-v5.png"),
   resolve(publicDirectory, "og.png"),
   { force: true },
 );
