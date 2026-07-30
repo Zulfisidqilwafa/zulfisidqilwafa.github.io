@@ -22,9 +22,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase,
-    title: "Zulfi Sidqil Wafa — Full-stack Developer & IT Systems",
+    title: "Zulfi Sidqil Wafa — IT, PPIC & Full-stack",
     description:
-      "Portfolio Zulfi Sidqil Wafa, Full-stack Developer dan Staff IT dengan fokus pada Golang, React, sistem, jaringan, dan pengembangan produk digital.",
+      "Portfolio Zulfi Sidqil Wafa, profesional IT dan PPIC di manufaktur plastik dengan kemampuan full-stack, PHP, SQL, Excel, sistem, jaringan, dan data operasional.",
     alternates: {
       canonical: "/",
     },
@@ -32,21 +32,21 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       locale: "id_ID",
       url: "/",
-      title: "Zulfi Sidqil Wafa — Full-stack Developer & IT Systems",
+      title: "Zulfi Sidqil Wafa — IT, PPIC & Full-stack",
       description:
-        "Membangun produk digital dan menjaga sistem tetap andal.",
+        "Menghubungkan software, data, dan operasional manufaktur.",
       images: [
         {
           url: "/og.png",
-          alt: "Zulfi Sidqil Wafa — Full-stack Developer dan IT Systems",
+          alt: "Zulfi Sidqil Wafa — IT, PPIC, dan Full-stack",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Zulfi Sidqil Wafa — Full-stack Developer & IT Systems",
+      title: "Zulfi Sidqil Wafa — IT, PPIC & Full-stack",
       description:
-        "Membangun produk digital dan menjaga sistem tetap andal.",
+        "Menghubungkan software, data, dan operasional manufaktur.",
       images: ["/og.png"],
     },
     icons: {

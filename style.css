@@ -786,13 +786,13 @@ em {
 .service-grid {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .service-card {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-md);
-  min-height: 440px;
+  min-height: 400px;
   padding: 30px;
   transition: border-color 0.25s ease, transform 0.25s ease;
 }
@@ -1021,6 +1021,11 @@ em {
   color: var(--ink);
 }
 
+.polyta-cover {
+  background: #233d8f;
+  color: var(--paper-strong);
+}
+
 .kerupuk-cover {
   background: var(--amber);
   color: var(--ink);
@@ -1028,6 +1033,11 @@ em {
 
 .story-cover {
   background: #2b3030;
+  color: var(--paper-strong);
+}
+
+.excel-cover {
+  background: #167c55;
   color: var(--paper-strong);
 }
 
@@ -1570,7 +1580,7 @@ em {
   }
 
   .service-card {
-    min-height: 470px;
+    min-height: 430px;
   }
 
   .contact-grid {

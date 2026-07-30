@@ -25,21 +25,21 @@ const english = {
   viewCv: "View CV",
   available: "Open to collaborate",
   location: "Indonesia • UTC+7",
-  heroTitle: "Building digital products.<br><em>Keeping systems reliable.</em>",
+  heroTitle: "Connecting software, data,<br><em>and manufacturing operations.</em>",
   heroLead:
-    "I’m Zulfi—a Full-stack Developer and IT practitioner who connects software, hardware, and networks into solutions that are simple, measurable, and maintainable.",
+    "I’m Zulfi—an IT and PPIC professional in plastic manufacturing who builds applications, manages operational data, and keeps devices and networks reliable.",
   exploreWork: "Explore my work",
   discuss: "Let’s talk",
   proofYears: "years growing<br>with technology",
   proofPublic: "public projects<br>ready to explore",
-  proofEnd: "code, devices<br>and networks",
+  proofEnd: "code, data<br>and operations",
   profileIndex: "01 / Profile",
   profileTitle: "Technology that works<br><em>for people.</em>",
   profileIntro:
-    "Curiosity about how video games work led me into IT at the age of 10. Today, I keep technology operations running while building web products from interface to system.",
+    "Curiosity about how video games work led me into IT at the age of 10. Today, I connect technology, production planning, inventory control, and data to support manufacturing operations.",
   currentRole: "Professional role",
   polytaDescription:
-    "Responsible for installation, evaluation, maintenance, and improvement across company computers, software, and network systems.",
+    "Supporting IT systems while contributing to production planning, inventory control, and operational data tracking across the company.",
   visitCompany: "Visit company",
   ventureRole: "Product in development",
   nibbliumDescription:
@@ -55,24 +55,34 @@ const english = {
   expertiseIndex: "02 / Expertise",
   expertiseTitle: "From idea to operations,<br><em>I connect the dots.</em>",
   expertiseIntro:
-    "An end-to-end approach to understanding problems, building solutions, and keeping products and systems stable in real use.",
+    "A cross-functional approach to understanding manufacturing needs, building solutions, organizing data, and keeping products and systems stable in real use.",
   fullstackDesc:
-    "Building web products with Golang and React, from business logic to responsive user interfaces.",
+    "Building web applications with PHP, SQL, Golang, and React, from databases and business logic to responsive user interfaces.",
   systemDesign: "System design",
   networkDesc:
     "Keeping devices, servers, and connections stable through configuration, monitoring, and routine maintenance.",
   installation: "Installation & configuration",
   monitoring: "Network monitoring",
   maintenance: "Device maintenance",
-  securityDesc: "Reducing risk, protecting data, and restoring services when disruptions occur.",
+  securityDesc: "Reducing risk, maintaining local and cloud backups, and restoring data and services after disruptions.",
+  ppicTitle: "PPIC & Manufacturing Data",
+  ppicDesc:
+    "Connecting production planning, inventory control, and operational data so work information is more structured and actionable.",
+  productionPlanning: "Production planning",
+  inventoryControl: "Inventory control",
+  dataQuality: "Data quality & structure",
   workIndex: "03 / Work",
   workTitle: "More than an interface.<br><em>A real problem gets solved.</em>",
   workIntro:
-    "A selection of public products and operational work. Open each card to see the context, contribution, and deliverable.",
+    "A selection of public products, internal applications, and operational work. Open each card to see the context, contribution, and deliverable.",
   filterAll: "All",
+  filterOperations: "Data & PPIC",
   filterInfrastructure: "Infrastructure",
   nibbliumProjectDesc:
     "A digital product supporting a snack business through product discovery, brand storytelling, and more adaptive operations.",
+  polytaAppsDesc:
+    "An internal application in development to organize data and workflows in plastic manufacturing using PHP, SQL, and Laragon.",
+  internalProject: "Internal project",
   readCase: "Read case study",
   liveSite: "Live site",
   inditDesc:
@@ -82,6 +92,8 @@ const english = {
     "A lightweight culinary catalog website that introduces local products through an accessible experience.",
   storyDesc:
     "A web storytelling experiment combining visuals, interaction, and audio into a personal experience.",
+  excelOpsDesc:
+    "Operational data tracking, formula and conditional-formatting management, plus local spreadsheet backup to Google Drive and OneDrive.",
   networkProjectDesc:
     "Network configuration, monitoring, and maintenance supporting reliable operational connectivity.",
   continuityDesc:
@@ -89,14 +101,17 @@ const english = {
   journeyIndex: "04 / Journey",
   journeyTitle: "A strong technical foundation.<br><em>A product direction that keeps growing.</em>",
   journeyIntro:
-    "My path moves from curiosity and computer-network fundamentals to company operations and full-stack product development.",
+    "My path moves from computer-network fundamentals to IT and PPIC in manufacturing, operational data management, and full-stack application development.",
   foundation: "Foundation",
   foundationTitle: "Computer & Network Engineering",
   foundationDesc:
     "Learning how devices, servers, cabling, and infrastructure work together as one connected system.",
   operations: "Operations",
   operationsDesc:
-    "Applying technical knowledge to real user and company needs every day.",
+    "Applying technical knowledge to users, systems, production planning, inventory control, and operational data needs.",
+  internalSystems: "Internal systems",
+  internalSystemsDesc:
+    "Building an internal application foundation and strengthening spreadsheet operations for manufacturing needs.",
   productGrowth: "Product growth",
   productGrowthDesc:
     "Expanding from systems support into end-to-end digital product development.",
@@ -144,6 +159,20 @@ const caseStudies = {
       tools: "Product thinking, web development, systems operations",
       links: [{ label: "Buka situs live", url: "https://nibblium.com" }]
     },
+    polyta: {
+      eyebrow: "Product • Manufacturing Operations",
+      title: "Polyta Internal Apps",
+      summary:
+        "Fondasi aplikasi internal untuk membantu menata data dan alur kerja pada perusahaan manufaktur plastik.",
+      challenge:
+        "Kebutuhan lintas IT dan PPIC memerlukan data yang lebih terstruktur serta alur internal yang mudah dikembangkan secara bertahap.",
+      contribution:
+        "Menyusun basis data polyta_internal_apps dan mengembangkan arah aplikasi web menggunakan PHP, SQL, serta Laragon sebagai lingkungan pengembangan lokal.",
+      output:
+        "Fondasi aplikasi dan basis data internal dalam tahap pengembangan. Detail data perusahaan tidak dipublikasikan.",
+      tools: "PHP, SQL, Laragon, database design, manufacturing workflow",
+      links: []
+    },
     indit: {
       eyebrow: "Web Development • E-commerce",
       title: "INDIT Commerce",
@@ -190,6 +219,20 @@ const caseStudies = {
         { label: "Lihat GitHub", url: "https://github.com/Zulfisidqilwafa/story" }
       ]
     },
+    excel: {
+      eyebrow: "Data Operations • Microsoft Excel",
+      title: "Excel & Cloud Data Operations",
+      summary:
+        "Mengelola spreadsheet operasional dari pelacakan data hingga pencadangan cloud dan perbaikan referensi rumus.",
+      challenge:
+        "Pemindahan workbook lokal ke Google Drive atau OneDrive dapat memutus referensi sheet eksternal dan mengganggu kesinambungan data.",
+      contribution:
+        "Menata data, formula, dan conditional formatting di Microsoft Excel; mengelola pencadangan cloud; serta menelusuri error referensi sheet saat transfer file.",
+      output:
+        "Workbook operasional yang lebih terawat, salinan cloud yang tersedia, dan referensi formula yang dapat dipulihkan ketika bermasalah.",
+      tools: "Microsoft Excel, formulas, conditional formatting, Google Drive, OneDrive",
+      links: []
+    },
     network: {
       eyebrow: "Infrastructure • Network",
       title: "Network Operations",
@@ -233,6 +276,20 @@ const caseStudies = {
         "A public website featuring product discovery, the business journey, team profiles, and contact channels.",
       tools: "Product thinking, web development, systems operations",
       links: [{ label: "Open live site", url: "https://nibblium.com" }]
+    },
+    polyta: {
+      eyebrow: "Product • Manufacturing Operations",
+      title: "Polyta Internal Apps",
+      summary:
+        "An internal application foundation designed to organize data and workflows in a plastic manufacturing company.",
+      challenge:
+        "Cross-functional IT and PPIC needs require more structured data and an internal workflow that can evolve incrementally.",
+      contribution:
+        "Designing the polyta_internal_apps database and shaping the web application with PHP, SQL, and Laragon as the local development environment.",
+      output:
+        "An internal application and database foundation currently in development. Company data details are not published.",
+      tools: "PHP, SQL, Laragon, database design, manufacturing workflow",
+      links: []
     },
     indit: {
       eyebrow: "Web Development • E-commerce",
@@ -279,6 +336,20 @@ const caseStudies = {
         { label: "Open demo", url: "https://zulfisidqilwafa.github.io/story/" },
         { label: "View GitHub", url: "https://github.com/Zulfisidqilwafa/story" }
       ]
+    },
+    excel: {
+      eyebrow: "Data Operations • Microsoft Excel",
+      title: "Excel & Cloud Data Operations",
+      summary:
+        "Managing operational spreadsheets from data tracking to cloud backup and formula-reference recovery.",
+      challenge:
+        "Moving local workbooks to Google Drive or OneDrive can break external sheet references and disrupt data continuity.",
+      contribution:
+        "Structuring data, formulas, and conditional formatting in Microsoft Excel; managing cloud backups; and tracing unresolved sheet-reference errors during file transfers.",
+      output:
+        "More maintainable operational workbooks, available cloud copies, and formula references that can be restored when issues occur.",
+      tools: "Microsoft Excel, formulas, conditional formatting, Google Drive, OneDrive",
+      links: []
     },
     network: {
       eyebrow: "Infrastructure • Network",

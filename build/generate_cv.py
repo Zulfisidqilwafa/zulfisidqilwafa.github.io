@@ -83,7 +83,7 @@ def build_cv(path):
 
     c.setTitle("Zulfi Sidqil Wafa - CV 2026")
     c.setAuthor("Zulfi Sidqil Wafa")
-    c.setSubject("Full-stack Developer and IT Systems")
+    c.setSubject("IT, PPIC, and Full-stack Development")
 
     c.setFillColor(PAPER)
     c.rect(0, 0, page_width, page_height, fill=1, stroke=0)
@@ -111,14 +111,14 @@ def build_cv(path):
     left = 38
     c.setFillColor(MINT)
     c.setFont("Courier-Bold", 8)
-    c.drawString(left, page_height - 42, "FULL-STACK DEVELOPER / IT SYSTEMS")
+    c.drawString(left, page_height - 42, "IT / PPIC / FULL-STACK DEVELOPMENT")
     c.setFillColor(WHITE)
     c.setFont("Helvetica-Bold", 27)
     c.drawString(left, page_height - 79, "ZULFI SIDQIL")
     c.drawString(left, page_height - 108, "WAFA")
     c.setFillColor(HexColor("#A7B5B1"))
     c.setFont("Helvetica", 8.2)
-    c.drawString(left, page_height - 137, "Golang + React | IT Operations | Network & Hardware")
+    c.drawString(left, page_height - 137, "PHP + SQL | Excel & PPIC | IT Systems | Network")
 
     contact_y = page_height - 159
     contact_items = [
@@ -144,18 +144,18 @@ def build_cv(path):
 
     y = section_label(c, "Profile", main_x, content_top, main_width)
     profile = (
-        "Full-stack Developer and IT practitioner with a computer-network foundation. "
-        "I connect Golang and React development with hands-on experience in devices, "
-        "software, networks, maintenance, and recovery."
+        "IT and PPIC professional in plastic manufacturing with a computer-network foundation. "
+        "I connect application development, operational data, production planning, inventory "
+        "control, devices, software, and networks."
     )
     y = draw_wrapped(c, profile, main_x, y, main_width, size=8.5, leading=12, color=INK) - 13
 
     y = section_label(c, "Experience", main_x, y, main_width)
     y = entry(
         c,
-        "Staff IT",
-        "PT POLYTA GLOBAL MANDIRI | IT OPERATIONS",
-        "Responsible for installation, evaluation, maintenance, and improvement across computers, software, and company network systems.",
+        "Staff IT & PPIC",
+        "PT POLYTA GLOBAL MANDIRI | MANUFACTURING OPERATIONS",
+        "Supporting IT systems, users, production planning, inventory control, and operational data tracking in a plastic manufacturing environment.",
         main_x,
         y,
         main_width,
@@ -173,16 +173,20 @@ def build_cv(path):
     y = section_label(c, "Selected Work", main_x, y, main_width)
     projects = [
         (
+            "Polyta Internal Apps",
+            "Internal application and database foundation using PHP, SQL, and Laragon.",
+        ),
+        (
             "Nibblium Digital Experience",
             "Product website, catalog, brand story, team profile, and contact flow.",
         ),
         (
-            "Kerupuk Nusantara",
-            "Responsive culinary catalog built with HTML, CSS, and JavaScript.",
+            "Excel & Cloud Data Operations",
+            "Operational tracking, formulas, conditional formatting, and cloud backup.",
         ),
         (
-            "INDIT Commerce",
-            "E-commerce experience and administration dashboard concept.",
+            "Kerupuk Nusantara",
+            "Responsive culinary catalog built with HTML, CSS, and JavaScript.",
         ),
     ]
     for title, body in projects:
@@ -194,12 +198,12 @@ def build_cv(path):
 
     side_y = section_label(c, "Core Skills", side_x, content_top, side_width)
     pill_width = 74
-    pills = ["Golang", "React", "JavaScript", "System Analysis", "Networking", "Hardware"]
+    pills = ["PHP", "SQL", "Excel", "PPIC", "Golang", "React", "Networking", "Hardware"]
     for index, label in enumerate(pills):
         column = index % 2
         row = index // 2
         skill_pill(c, label, side_x + column * 80, side_y - row * 27, pill_width)
-    side_y -= 91
+    side_y -= 118
 
     side_y = section_label(c, "Education", side_x, side_y, side_width)
     side_y = entry(
@@ -258,8 +262,8 @@ def build_cv(path):
             "Keep devices, software, and network infrastructure dependable day to day.",
         ),
         (
-            "IMPROVE",
-            "Diagnose issues, strengthen maintenance routines, and support reliable recovery.",
+            "PLAN",
+            "Connect production planning, inventory control, and operational data into actionable work.",
         ),
     ]
     value_width = 151
