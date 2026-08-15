@@ -1,18 +1,18 @@
 :root {
-  --ink: #07110f;
-  --ink-soft: #10231f;
-  --paper: #edf2ef;
-  --paper-strong: #fbfdfc;
-  --mint: #76f7c4;
-  --mint-dark: #11976b;
+  --ink: #fbfdfc;
+  --ink-soft: #edf2ef;
+  --paper: #0b1110;
+  --paper-strong: #151e1d;
+  --mint: #00e5ff;
+  --mint-dark: #0088ff;
   --amber: #ffb85c;
   --blue: #77a8ff;
-  --line: rgba(11, 17, 16, 0.18);
-  --muted: #66716e;
+  --line: rgba(255, 255, 255, 0.1);
+  --muted: #8a9693;
   --container: 1200px;
   --radius-lg: 32px;
   --radius-md: 20px;
-  --shadow: 0 28px 80px rgba(7, 17, 15, 0.14);
+  --shadow: 0 28px 80px rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -2609,4 +2609,43 @@ body.pointer-active .pointer-glow {
   .tilt-card::after {
     display: none;
   }
+  }
+}
+
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.site-header.scrolled {
+  background: rgba(11, 17, 16, 0.7) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-card, .service-card, .experience-card, .education-card, .timeline-item {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover, .service-card:hover, .experience-card:hover, .education-card:hover {
+  border-color: var(--mint) !important;
+  box-shadow: 0 20px 40px rgba(0, 229, 255, 0.15) !important;
+}
+
+.primary-nav a {
+  color: var(--muted) !important;
+}
+
+.primary-nav a:hover, .primary-nav a.active {
+  color: var(--mint) !important;
 }
