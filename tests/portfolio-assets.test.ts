@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 
 const root = resolve(import.meta.dirname, "..");
 const portfolioDocument = readFileSync(resolve(root, "index.html"), "utf8");
+const portfolioStylesheet = readFileSync(resolve(root, "style.css"), "utf8");
 
 describe("portfolio assets", () => {
   it("keeps every locally referenced image in the source tree", () => {
@@ -22,6 +23,17 @@ describe("portfolio assets", () => {
     expect(portfolioDocument).not.toContain("three.min.js");
     expect(portfolioDocument).not.toContain("vanilla-tilt");
     expect(portfolioDocument).toContain('<script src="script.js"></script>');
+  });
+
+  it("keeps every stylesheet icon available to GitHub Pages", () => {
+    const iconReferences = [
+      ...portfolioStylesheet.matchAll(/url\(["']?(icons\/[^"')]+)["']?\)/g),
+    ].map((match) => match[1]);
+
+    expect(iconReferences.length).toBeGreaterThan(0);
+    iconReferences.forEach((iconPath) => {
+      expect(existsSync(resolve(root, iconPath)), `Missing ${iconPath}`).toBe(true);
+    });
   });
 
   it("contains every portfolio image and infrastructure case study", () => {
