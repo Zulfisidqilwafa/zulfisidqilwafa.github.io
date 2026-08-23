@@ -37,7 +37,7 @@ def wrap_text(text, font_name, font_size, max_width):
     return lines
 
 
-def draw_wrapped(c, text, x, y, width, font="Helvetica", size=8.4, leading=12, color=MUTED):
+def draw_wrapped(c, text, x, y, width, font="Helvetica", size=8.8, leading=12.4, color=MUTED):
     c.setFillColor(color)
     c.setFont(font, size)
     for line in wrap_text(text, font, size, width):
@@ -48,7 +48,7 @@ def draw_wrapped(c, text, x, y, width, font="Helvetica", size=8.4, leading=12, c
 
 def section_label(c, label, x, y, width):
     c.setFillColor(MINT_DARK)
-    c.setFont("Courier-Bold", 7.4)
+    c.setFont("Courier-Bold", 7.8)
     c.drawString(x, y, label.upper())
     c.setStrokeColor(LINE)
     c.setLineWidth(0.7)
@@ -58,14 +58,15 @@ def section_label(c, label, x, y, width):
 
 def entry(c, title, subtitle, body, x, y, width):
     c.setFillColor(INK)
-    c.setFont("Helvetica-Bold", 10.2)
-    c.drawString(x, y, title)
-    y -= 13
+    c.setFont("Helvetica-Bold", 10.6)
+    for line in wrap_text(title, "Helvetica-Bold", 10.6, width):
+        c.drawString(x, y, line)
+        y -= 12
     c.setFillColor(MINT_DARK)
-    c.setFont("Helvetica-Bold", 7.7)
+    c.setFont("Helvetica-Bold", 8.1)
     c.drawString(x, y, subtitle)
     y -= 13
-    y = draw_wrapped(c, body, x, y, width, size=8.1, leading=11)
+    y = draw_wrapped(c, body, x, y, width, size=8.5, leading=11.5)
     return y - 10
 
 
@@ -73,7 +74,7 @@ def skill_pill(c, label, x, y, width):
     c.setFillColor(WHITE)
     c.roundRect(x, y - 14, width, 20, 8, fill=1, stroke=0)
     c.setFillColor(INK)
-    c.setFont("Courier-Bold", 7.2)
+    c.setFont("Courier-Bold", 7.7)
     c.drawCentredString(x + width / 2, y - 7, label.upper())
 
 
@@ -137,13 +138,13 @@ def build_cv(path):
 
     left = 38
     c.setFillColor(MINT)
-    c.setFont("Courier-Bold", 8)
+    c.setFont("Courier-Bold", 8.5)
     c.drawString(left, page_height - 42, "FULL-STACK DEVELOPER")
     c.setFillColor(WHITE)
-    c.setFont("Helvetica-Bold", 14)
+    c.setFont("Helvetica-Bold", 14.5)
     c.drawString(left, page_height - 74, "ZULFI SIDQIL WAFA")
     c.setFillColor(HexColor("#A7B5B1"))
-    c.setFont("Helvetica", 8.2)
+    c.setFont("Helvetica", 8.7)
     c.drawString(left, page_height - 108, "PHP + SQL | GOLANG + REACT | WEB APPLICATIONS")
 
     contact_y = page_height - 146
@@ -155,10 +156,10 @@ def build_cv(path):
     contact_x = left
     for label, value in contact_items:
         c.setFillColor(MINT)
-        c.setFont("Courier-Bold", 6.4)
+        c.setFont("Courier-Bold", 6.9)
         c.drawString(contact_x, contact_y, label)
         c.setFillColor(WHITE)
-        c.setFont("Helvetica", 7.3)
+        c.setFont("Helvetica", 7.8)
         c.drawString(contact_x + 31, contact_y, value)
         contact_x += 150 if label != "PHONE" else 140
 
@@ -174,7 +175,7 @@ def build_cv(path):
         "web applications. I work across database design, backend logic, responsive interfaces, "
         "debugging, and delivery."
     )
-    y = draw_wrapped(c, profile, main_x, y, main_width, size=8.5, leading=12, color=INK) - 13
+    y = draw_wrapped(c, profile, main_x, y, main_width, size=9, leading=12.5, color=INK) - 13
 
     y = section_label(c, "Experience", main_x, y, main_width)
     y = entry(
@@ -217,10 +218,10 @@ def build_cv(path):
     ]
     for title, body in projects:
         c.setFillColor(INK)
-        c.setFont("Helvetica-Bold", 8.9)
+        c.setFont("Helvetica-Bold", 9.4)
         c.drawString(main_x, y, title)
         y -= 11
-        y = draw_wrapped(c, body, main_x, y, main_width, size=7.7, leading=10) - 6
+        y = draw_wrapped(c, body, main_x, y, main_width, size=8.2, leading=10.5) - 6
 
     side_y = section_label(c, "Core Skills", side_x, content_top, side_width)
     pill_width = 74
@@ -259,11 +260,11 @@ def build_cv(path):
     ]
     for label, value, url in links:
         c.setFillColor(MINT_DARK)
-        c.setFont("Courier-Bold", 6.5)
+        c.setFont("Courier-Bold", 7)
         c.drawString(side_x, side_y, label)
         side_y -= 10
         c.setFillColor(INK)
-        c.setFont("Helvetica", 7.5)
+        c.setFont("Helvetica", 8)
         c.drawString(side_x, side_y, value)
         c.linkURL(url, (side_x, side_y - 2, side_x + side_width, side_y + 8), relative=0)
         side_y -= 19
@@ -275,7 +276,7 @@ def build_cv(path):
     c.setFillColor(INK)
     c.roundRect(panel_x, panel_y, panel_width, panel_height, 8, fill=1, stroke=0)
     c.setFillColor(MINT)
-    c.setFont("Courier-Bold", 7.4)
+    c.setFont("Courier-Bold", 8)
     c.drawString(panel_x + 16, panel_y + panel_height - 22, "HOW I BUILD")
 
     value_items = [
@@ -296,7 +297,7 @@ def build_cv(path):
     for index, (label, body) in enumerate(value_items):
         value_x = panel_x + 16 + index * 164
         c.setFillColor(WHITE)
-        c.setFont("Helvetica-Bold", 9)
+        c.setFont("Helvetica-Bold", 9.5)
         c.drawString(value_x, panel_y + 72, label)
         draw_wrapped(
             c,
@@ -304,15 +305,15 @@ def build_cv(path):
             value_x,
             panel_y + 56,
             value_width,
-            size=7.5,
-            leading=10,
+            size=8,
+            leading=10.5,
             color=HexColor("#A7B5B1"),
         )
 
     c.setStrokeColor(LINE)
     c.line(38, 35, page_width - 38, 35)
     c.setFillColor(MUTED)
-    c.setFont("Courier", 6.5)
+    c.setFont("Courier", 7)
     c.drawString(38, 22, "ZULFI SIDQIL WAFA / CV 2026")
     c.drawRightString(page_width - 38, 22, "INDONESIA / UTC+7")
 
