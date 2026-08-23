@@ -161,7 +161,7 @@ def build_cv(path):
         c.setFillColor(WHITE)
         c.setFont("Helvetica", 7.8)
         c.drawString(contact_x + 31, contact_y, value)
-        contact_x += 150 if label != "PHONE" else 140
+        contact_x += 132 if label == "EMAIL" else 124
 
     content_top = page_height - header_height - 30
     main_x = 38
