@@ -140,14 +140,13 @@ def build_cv(path):
     c.setFont("Courier-Bold", 8)
     c.drawString(left, page_height - 42, "FULL-STACK DEVELOPER")
     c.setFillColor(WHITE)
-    c.setFont("Helvetica-Bold", 17)
-    c.drawString(left, page_height - 76, "ZULFI SIDQIL")
-    c.drawString(left, page_height - 98, "WAFA")
+    c.setFont("Helvetica-Bold", 14)
+    c.drawString(left, page_height - 74, "ZULFI SIDQIL WAFA")
     c.setFillColor(HexColor("#A7B5B1"))
     c.setFont("Helvetica", 8.2)
-    c.drawString(left, page_height - 137, "PHP + SQL | GOLANG + REACT | WEB APPLICATIONS")
+    c.drawString(left, page_height - 108, "PHP + SQL | GOLANG + REACT | WEB APPLICATIONS")
 
-    contact_y = page_height - 159
+    contact_y = page_height - 146
     contact_items = [
         ("EMAIL", "zulfisidqilwafa@gmail.com"),
         ("PHONE", "+62 821 1583 4047"),
