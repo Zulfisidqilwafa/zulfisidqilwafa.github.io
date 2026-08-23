@@ -11,9 +11,31 @@ const languageToggle = document.getElementById("language-toggle");
 const languageLabels = [...languageToggle.querySelectorAll("span")];
 const caseDialog = document.getElementById("case-dialog");
 const dialogClose = document.getElementById("dialog-close");
+const technologyYears = document.getElementById("technology-years");
 
 let currentLanguage = new URLSearchParams(window.location.search).get("lang") === "en" ? "en" : "id";
 let toastTimer;
+
+const updateTechnologyYears = (today = new Date()) => {
+  const birthDate = new Date(2000, 2, 25);
+  const technologyStartDate = new Date(
+    birthDate.getFullYear() + 10,
+    birthDate.getMonth(),
+    birthDate.getDate()
+  );
+
+  let completedYears = today.getFullYear() - technologyStartDate.getFullYear();
+  const anniversaryThisYear = new Date(
+    today.getFullYear(),
+    technologyStartDate.getMonth(),
+    technologyStartDate.getDate()
+  );
+
+  if (today < anniversaryThisYear) completedYears -= 1;
+  technologyYears.textContent = `${Math.max(0, completedYears)}+`;
+};
+
+updateTechnologyYears();
 
 const english = {
   skip: "Skip to content",
@@ -27,16 +49,16 @@ const english = {
   location: "Indonesia • UTC+7",
   heroTitle: "Building web applications.<br><em>From database to interface.</em>",
   heroLead:
-    "I’m Zulfi—a Full-stack Developer who translates business needs into structured, responsive, and maintainable web applications.",
+    "I’m Zulfi—a Full-stack Developer who translates business needs into structured, responsive, and maintainable web applications and digital systems.",
   exploreWork: "Explore my work",
   discuss: "Let’s talk",
   proofYears: "years growing<br>with technology",
-  proofPublic: "selected projects<br>and applications",
-  proofEnd: "backend, frontend<br>and database",
+  proofPublic: "selected work<br>and capabilities",
+  proofEnd: "applications, data<br>and infrastructure",
   profileIndex: "01 / Profile",
   profileTitle: "Technology that works<br><em>for people.</em>",
   profileIntro:
-    "I build web applications end to end: understanding requirements, designing databases and system flows, writing backend logic, and delivering clear responsive interfaces.",
+    "I work end to end: understanding requirements, designing databases and system flows, writing backend logic, building interfaces, and keeping the technical foundation reliable.",
   currentRole: "Professional role",
   polytaDescription:
     "Developing an internal application and database foundation with PHP, SQL, and Laragon to support company needs.",
@@ -55,7 +77,7 @@ const english = {
   expertiseIndex: "02 / Expertise",
   expertiseTitle: "From idea to operations,<br><em>I connect the dots.</em>",
   expertiseIntro:
-    "A full-stack approach to turning requirements into architecture, code, and user experiences that can keep evolving.",
+    "A full-stack approach to turning requirements into architecture, code, user experiences, and technical operations that can keep evolving.",
   fullstackDesc:
     "Building organized application logic, data structures, and backend services with PHP, Golang, and SQL.",
   businessLogic: "Business logic",
@@ -70,15 +92,16 @@ const english = {
   modularArchitecture: "Modular architecture",
   deliveryTitle: "Delivery & Reliability",
   deliveryDesc:
-    "Maintaining implementation quality through version control, debugging, testing, and structured deployment.",
+    "Maintaining implementation quality and service continuity through version control, debugging, testing, deployment, and structured system recovery.",
   testing: "Testing",
   deployment: "Deployment",
   workIndex: "03 / Work",
   workTitle: "More than an interface.<br><em>A real problem gets solved.</em>",
   workIntro:
-    "A selection of internal applications, business products, and web experiments. Open each card to see the problem, technical contribution, and implementation.",
+    "A selection of digital products, internal applications, web experiments, and infrastructure capabilities. Open each card to see its context, contribution, and outcome.",
   filterAll: "All",
   filterApplication: "Application",
+  filterInfrastructure: "Infrastructure",
   nibbliumProjectDesc:
     "A digital product supporting a snack business through product discovery, brand storytelling, and more adaptive operations.",
   polytaAppsDesc:
@@ -93,6 +116,15 @@ const english = {
     "A lightweight culinary catalog website that introduces local products through an accessible experience.",
   storyDesc:
     "A web storytelling experiment combining visuals, interaction, and audio into a personal experience.",
+  networkOpsDesc:
+    "Configuring, monitoring, and maintaining network connectivity so devices and services remain reliably connected.",
+  backupDesc:
+    "A layered backup workflow that reduces data-loss risk from device failure, system disruption, or user error.",
+  maintenanceDesc:
+    "Structured hardware and software maintenance that keeps user devices performant, secure, and ready for use.",
+  recoveryDesc:
+    "Restoring systems, applications, and data after disruption, with integrity verification and a controlled return to operation.",
+  operationalScope: "Operational scope",
   journeyIndex: "04 / Journey",
   journeyTitle: "From technical foundations.<br><em>To Full-stack Developer.</em>",
   journeyIntro:
@@ -116,7 +148,8 @@ const english = {
   contactTitle: "Have an application idea<br><em>worth building?</em>",
   contactIntro:
     "Tell me what you need. Your message can go directly to WhatsApp without storing personal data on this website.",
-  sendMessage: "Send a direct message",
+  formEyebrow: "Start a conversation",
+  sendMessage: "Tell me about your project or needs",
   nameLabel: "Name",
   namePlaceholder: "Full name",
   emailPlaceholder: "name@email.com",
@@ -132,7 +165,7 @@ const english = {
   privacyNote:
     "You will review the message in WhatsApp before sending it. This website does not store your message.",
   footerCopy: "Built to keep evolving.",
-  backTop: "Back to top ↑",
+  backTop: "Back to top",
   caseChallenge: "Challenge",
   caseContribution: "Contribution",
   caseOutput: "Deliverable"
@@ -213,6 +246,46 @@ const caseStudies = {
         { label: "Buka demo", url: "https://zulfisidqilwafa.github.io/story/" },
         { label: "Lihat GitHub", url: "https://github.com/Zulfisidqilwafa/story" }
       ]
+    },
+    network: {
+      eyebrow: "Infrastructure • Network",
+      title: "Network Infrastructure",
+      summary: "Menjaga konektivitas perangkat dan layanan melalui konfigurasi serta pemantauan jaringan yang teratur.",
+      challenge: "Koneksi perlu tetap stabil dan mudah ditelusuri ketika perangkat, pengguna, serta kebutuhan layanan terus berkembang.",
+      contribution: "Menata koneksi, memantau status jaringan, dan melakukan pemeriksaan berkala untuk membantu menemukan gangguan lebih cepat.",
+      output: "Infrastruktur jaringan yang lebih rapi, terpantau, dan siap dipelihara secara berkelanjutan.",
+      tools: "Network configuration, topology, monitoring, troubleshooting",
+      links: []
+    },
+    backup: {
+      eyebrow: "IT Operations • Data Protection",
+      title: "Data Backup Workflow",
+      summary: "Alur pencadangan berlapis untuk menjaga ketersediaan data penting ketika terjadi gangguan.",
+      challenge: "Data dapat terdampak oleh kegagalan perangkat, masalah sistem, maupun kesalahan pengguna.",
+      contribution: "Menyusun alur salinan data ke media terpisah serta memastikan hasil pencadangan dapat diperiksa.",
+      output: "Proses backup yang lebih teratur dengan salinan terpisah dan langkah verifikasi yang jelas.",
+      tools: "Backup planning, storage, verification, data protection",
+      links: []
+    },
+    maintenance: {
+      eyebrow: "IT Support • Maintenance",
+      title: "System Maintenance",
+      summary: "Pemeliharaan perangkat keras dan perangkat lunak untuk menjaga kesiapan perangkat kerja.",
+      challenge: "Perangkat pengguna memerlukan pemeriksaan berkala agar penurunan performa dan gangguan dapat diketahui lebih awal.",
+      contribution: "Melakukan pemeriksaan komponen, diagnostik sistem, pembaruan, dan perawatan dasar secara terstruktur.",
+      output: "Perangkat yang lebih stabil, terawat, dan siap mendukung kebutuhan operasional pengguna.",
+      tools: "Hardware diagnostics, software maintenance, updates, troubleshooting",
+      links: []
+    },
+    recovery: {
+      eyebrow: "IT Operations • Recovery",
+      title: "System & Data Recovery",
+      summary: "Pemulihan layanan dan data setelah gangguan dengan tahapan pemeriksaan yang dapat ditelusuri.",
+      challenge: "Setelah terjadi gangguan, sistem perlu dipulihkan tanpa mengabaikan integritas data dan kesiapan aplikasi.",
+      contribution: "Menjalankan pemeriksaan, pemulihan data dan layanan, lalu memverifikasi kondisi sistem sebelum digunakan kembali.",
+      output: "Sistem kembali beroperasi dengan status layanan dan integritas data yang telah diperiksa.",
+      tools: "System recovery, data restoration, validation, service continuity",
+      links: []
     }
   },
   en: {
@@ -289,6 +362,46 @@ const caseStudies = {
         { label: "Open demo", url: "https://zulfisidqilwafa.github.io/story/" },
         { label: "View GitHub", url: "https://github.com/Zulfisidqilwafa/story" }
       ]
+    },
+    network: {
+      eyebrow: "Infrastructure • Network",
+      title: "Network Infrastructure",
+      summary: "Keeping devices and services connected through structured network configuration and monitoring.",
+      challenge: "Connectivity must remain stable and traceable as devices, users, and service requirements grow.",
+      contribution: "Organizing connections, monitoring network status, and running regular checks to identify disruptions earlier.",
+      output: "A cleaner, observable network foundation that can be maintained continuously.",
+      tools: "Network configuration, topology, monitoring, troubleshooting",
+      links: []
+    },
+    backup: {
+      eyebrow: "IT Operations • Data Protection",
+      title: "Data Backup Workflow",
+      summary: "A layered backup workflow that helps preserve important data when disruption occurs.",
+      challenge: "Data can be affected by device failure, system issues, or user error.",
+      contribution: "Structuring copies across separate storage destinations and making backup results verifiable.",
+      output: "A more consistent backup process with separated copies and clear verification steps.",
+      tools: "Backup planning, storage, verification, data protection",
+      links: []
+    },
+    maintenance: {
+      eyebrow: "IT Support • Maintenance",
+      title: "System Maintenance",
+      summary: "Hardware and software maintenance that keeps workplace devices ready for use.",
+      challenge: "User devices need regular checks so performance degradation and disruption can be identified early.",
+      contribution: "Performing component checks, system diagnostics, updates, and routine care through a structured process.",
+      output: "More stable, maintained devices ready to support daily operations.",
+      tools: "Hardware diagnostics, software maintenance, updates, troubleshooting",
+      links: []
+    },
+    recovery: {
+      eyebrow: "IT Operations • Recovery",
+      title: "System & Data Recovery",
+      summary: "Restoring services and data after disruption through a traceable verification process.",
+      challenge: "After disruption, systems must be restored without overlooking data integrity or application readiness.",
+      contribution: "Running checks, restoring data and services, and validating system condition before returning it to use.",
+      output: "An operational system with service status and data integrity verified.",
+      tools: "System recovery, data restoration, validation, service continuity",
+      links: []
     }
   }
 };
@@ -361,6 +474,9 @@ const applyLanguage = (language, updateUrl = true) => {
     label.classList.toggle("active", label.textContent.toLowerCase() === language);
   });
 
+  languageToggle.dataset.language = language;
+  languageToggle.setAttribute("aria-pressed", String(language === "en"));
+
   languageToggle.setAttribute(
     "aria-label",
     language === "en" ? "Ganti ke Bahasa Indonesia" : "Switch to English"
@@ -401,7 +517,13 @@ const openCaseStudy = (caseId) => {
     anchor.href = link.url;
     anchor.target = "_blank";
     anchor.rel = "noopener";
-    anchor.textContent = `${link.label} ↗`;
+    anchor.textContent = link.label;
+    const linkIcon = document.createElement("span");
+    linkIcon.className = link.url.includes("github.com")
+      ? "brand-icon icon icon-github"
+      : "icon icon-external-link";
+    linkIcon.setAttribute("aria-hidden", "true");
+    anchor.append(linkIcon);
     linksContainer.appendChild(anchor);
   });
 
@@ -645,85 +767,83 @@ track("page_view", {
   referrerHost: document.referrer ? new URL(document.referrer).hostname : "direct"
 });
 
-// --- 3D INTERACTIVE BACKGROUND (Three.js) ---
-if (typeof THREE !== 'undefined') {
-  const canvas = document.getElementById('bg-canvas');
-  if (canvas) {
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
-    
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+// Lightweight dimensional background without third-party runtime dependencies.
+const backgroundCanvas = document.getElementById("bg-canvas");
+const backgroundContext = backgroundCanvas?.getContext("2d");
 
-    // Create particles
-    const particlesGeometry = new THREE.BufferGeometry();
-    const particlesCount = 700;
-    const posArray = new Float32Array(particlesCount * 3);
+if (backgroundCanvas && backgroundContext) {
+  let backgroundFrame;
+  let canvasWidth = window.innerWidth;
+  let canvasHeight = window.innerHeight;
+  let pointerX = canvasWidth / 2;
+  let pointerY = canvasHeight / 2;
+  let particles = [];
 
-    for (let i = 0; i < particlesCount * 3; i++) {
-      posArray[i] = (Math.random() - 0.5) * 10;
+  const createParticles = () => {
+    const particleCount = Math.min(150, Math.max(54, Math.round((canvasWidth * canvasHeight) / 12000)));
+    particles = Array.from({ length: particleCount }, () => ({
+      x: Math.random() * canvasWidth,
+      y: Math.random() * canvasHeight,
+      depth: 0.25 + Math.random() * 0.75,
+      radius: 0.5 + Math.random() * 1.25,
+      speed: 0.08 + Math.random() * 0.22
+    }));
+  };
+
+  const resizeBackground = () => {
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+    canvasWidth = window.innerWidth;
+    canvasHeight = window.innerHeight;
+    backgroundCanvas.width = Math.round(canvasWidth * pixelRatio);
+    backgroundCanvas.height = Math.round(canvasHeight * pixelRatio);
+    backgroundCanvas.style.width = `${canvasWidth}px`;
+    backgroundCanvas.style.height = `${canvasHeight}px`;
+    backgroundContext.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+    createParticles();
+  };
+
+  const renderBackground = (time = 0) => {
+    backgroundContext.clearRect(0, 0, canvasWidth, canvasHeight);
+
+    const pointerOffsetX = (pointerX - canvasWidth / 2) / canvasWidth;
+    const pointerOffsetY = (pointerY - canvasHeight / 2) / canvasHeight;
+
+    particles.forEach((particle) => {
+      const drift = reducedMotionQuery.matches ? 0 : time * particle.speed * 0.004;
+      const x = (particle.x + Math.sin(drift + particle.y) * 12 + pointerOffsetX * particle.depth * 28 + canvasWidth) % canvasWidth;
+      const y = (particle.y + drift * 8 + pointerOffsetY * particle.depth * 22) % canvasHeight;
+      const alpha = 0.16 + particle.depth * 0.42;
+
+      backgroundContext.beginPath();
+      backgroundContext.fillStyle = `rgba(98, 242, 194, ${alpha.toFixed(3)})`;
+      backgroundContext.arc(x, y, particle.radius * particle.depth, 0, Math.PI * 2);
+      backgroundContext.fill();
+    });
+
+    if (!reducedMotionQuery.matches && !document.hidden) {
+      backgroundFrame = window.requestAnimationFrame(renderBackground);
     }
+  };
 
-    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-    const material = new THREE.PointsMaterial({
-      size: 0.015,
-      color: 0x00e5ff,
-      transparent: true,
-      opacity: 0.8,
-    });
+  const startBackground = () => {
+    window.cancelAnimationFrame(backgroundFrame);
+    renderBackground(performance.now());
+  };
 
-    const particlesMesh = new THREE.Points(particlesGeometry, material);
-    scene.add(particlesMesh);
-    camera.position.z = 3;
-
-    // Mouse interactivity
-    let mouseX = 0;
-    let mouseY = 0;
-    let targetX = 0;
-    let targetY = 0;
-    const windowHalfX = window.innerWidth / 2;
-    const windowHalfY = window.innerHeight / 2;
-
-    document.addEventListener('mousemove', (event) => {
-      mouseX = (event.clientX - windowHalfX);
-      mouseY = (event.clientY - windowHalfY);
-    });
-
-    const clock = new THREE.Clock();
-
-    const animate = () => {
-      requestAnimationFrame(animate);
-      const elapsedTime = clock.getElapsedTime();
-
-      targetX = mouseX * 0.001;
-      targetY = mouseY * 0.001;
-
-      particlesMesh.rotation.y += 0.001;
-      particlesMesh.rotation.x += 0.0005;
-
-      particlesMesh.rotation.y += 0.05 * (targetX - particlesMesh.rotation.y);
-      particlesMesh.rotation.x += 0.05 * (targetY - particlesMesh.rotation.x);
-
-      renderer.render(scene, camera);
-    };
-
-    animate();
-
-    window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-  }
-}
-
-// --- VANILLA TILT INIT ---
-if (typeof VanillaTilt !== 'undefined') {
-  VanillaTilt.init(document.querySelectorAll(".project-card, .service-card, .experience-card, .education-card"), {
-    max: 10,
-    speed: 400,
-    glare: true,
-    "max-glare": 0.2,
+  window.addEventListener("pointermove", (event) => {
+    pointerX = event.clientX;
+    pointerY = event.clientY;
+  }, { passive: true });
+  window.addEventListener("resize", resizeBackground, { passive: true });
+  reducedMotionQuery.addEventListener("change", startBackground);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      window.cancelAnimationFrame(backgroundFrame);
+    } else {
+      startBackground();
+    }
   });
+
+  resizeBackground();
+  startBackground();
 }

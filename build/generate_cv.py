@@ -8,7 +8,8 @@ from reportlab.pdfgen import canvas
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "output" / "pdf" / "zulfi-sidqil-wafa-cv-2026.pdf"
-WEB_COPY = ROOT / "cv" / "zulfisidqilwafa.pdf"
+WEB_COPY = ROOT / "cv" / "zulfi-sidqil-wafa-cv-2026.pdf"
+LEGACY_WEB_COPY = ROOT / "cv" / "zulfisidqilwafa.pdf"
 
 INK = HexColor("#0B1110")
 PAPER = HexColor("#F7F4EC")
@@ -92,21 +93,47 @@ def build_cv(path):
     c.setFillColor(INK)
     c.rect(0, page_height - header_height, page_width, header_height, fill=1, stroke=0)
 
-    c.setFillColor(MINT)
-    c.circle(488, page_height - 82, 78, fill=1, stroke=0)
-    c.setStrokeColor(HexColor("#27403A"))
-    c.circle(488, page_height - 82, 91, fill=0, stroke=1)
+    portrait_x = 488
+    portrait_y = page_height - 81
 
-    portrait = ImageReader(str(ROOT / "images" / "zulfi-1.png"))
+    # Fully circular portrait treatment with dark neomorphic layers.
+    c.setFillColor(HexColor("#06100D"))
+    c.setStrokeColor(HexColor("#2B5548"))
+    c.setLineWidth(1.1)
+    c.circle(portrait_x, portrait_y, 73, fill=1, stroke=1)
+    c.setFillColor(HexColor("#0D241D"))
+    c.setStrokeColor(HexColor("#1C7458"))
+    c.setLineWidth(0.75)
+    c.circle(portrait_x, portrait_y, 67, fill=1, stroke=1)
+
+    # Clip the transparent portrait into the circle so no square edge remains.
+    c.saveState()
+    portrait_clip = c.beginPath()
+    portrait_clip.circle(portrait_x, portrait_y, 66)
+    c.clipPath(portrait_clip, stroke=0, fill=0)
+    portrait = ImageReader(str(ROOT / "images" / "zulfi-2.png"))
     c.drawImage(
         portrait,
-        419,
-        page_height - 151,
-        width=138,
-        height=138,
+        425,
+        page_height - 146,
+        width=126,
+        height=126,
         preserveAspectRatio=True,
         mask="auto",
     )
+    c.restoreState()
+
+    # Minimal circuit accents follow the circle instead of forming a card.
+    c.setStrokeColor(MINT)
+    c.setLineWidth(1.2)
+    c.arc(portrait_x - 69, portrait_y - 69, portrait_x + 69, portrait_y + 69, 28, 54)
+    c.arc(portrait_x - 69, portrait_y - 69, portrait_x + 69, portrait_y + 69, 208, 38)
+    c.setFillColor(MINT)
+    for node_x, node_y in [
+        (portrait_x - 62, portrait_y + 29),
+        (portrait_x + 59, portrait_y - 33),
+    ]:
+        c.circle(node_x, node_y, 1.8, fill=1, stroke=0)
 
     left = 38
     c.setFillColor(MINT)
@@ -297,5 +324,6 @@ def build_cv(path):
 if __name__ == "__main__":
     build_cv(OUTPUT)
     WEB_COPY.write_bytes(OUTPUT.read_bytes())
+    LEGACY_WEB_COPY.write_bytes(OUTPUT.read_bytes())
     print(OUTPUT)
     print(WEB_COPY)
