@@ -140,7 +140,7 @@ def build_cv(path):
     c.setFont("Courier-Bold", 8)
     c.drawString(left, page_height - 42, "FULL-STACK DEVELOPER")
     c.setFillColor(WHITE)
-    c.setFont("Helvetica-Bold", 27)
+    c.setFont("Helvetica-Bold", 23)
     c.drawString(left, page_height - 79, "ZULFI SIDQIL")
     c.drawString(left, page_height - 108, "WAFA")
     c.setFillColor(HexColor("#A7B5B1"))
