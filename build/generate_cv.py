@@ -111,7 +111,7 @@ def build_cv(path):
     portrait_clip = c.beginPath()
     portrait_clip.circle(portrait_x, portrait_y, 66)
     c.clipPath(portrait_clip, stroke=0, fill=0)
-    portrait = ImageReader(str(ROOT / "images" / "zulfi-2.png"))
+    portrait = ImageReader(str(ROOT / "images" / "cv-profile-2026.jpg"))
     c.drawImage(
         portrait,
         425,
