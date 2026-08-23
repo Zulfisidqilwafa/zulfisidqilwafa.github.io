@@ -185,7 +185,7 @@ const caseStudies = {
       output:
         "Website publik dengan katalog produk, cerita perjalanan bisnis, profil tim, dan kanal kontak.",
       tools: "Product thinking, web development, responsive UI, content architecture",
-      links: [{ label: "Buka situs live", url: "https://nibblium.com" }]
+      links: [{ label: "Buka situs live", url: "https://nibblium.great-site.net" }]
     },
     polyta: {
       eyebrow: "Web Application • PHP / SQL",
@@ -301,7 +301,7 @@ const caseStudies = {
       output:
         "A public website featuring product discovery, the business journey, team profiles, and contact channels.",
       tools: "Product thinking, web development, responsive UI, content architecture",
-      links: [{ label: "Open live site", url: "https://nibblium.com" }]
+      links: [{ label: "Open live site", url: "https://nibblium.great-site.net" }]
     },
     polyta: {
       eyebrow: "Web Application • PHP / SQL",
